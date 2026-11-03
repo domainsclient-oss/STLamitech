@@ -46,13 +46,13 @@ export function Header() {
         </a>
 
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-8 xl:gap-10">
+          <ul className="flex items-center gap-7 xl:gap-10">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   className={cn(
-                    "group relative py-2 text-[0.8125rem] font-medium tracking-wide transition-colors duration-300",
+                    "group relative py-2 text-[0.9375rem] font-medium tracking-wide xl:text-base transition-colors duration-300",
                     solid ? "text-charcoal/80 hover:text-charcoal" : "text-white/80 hover:text-white",
                   )}
                 >
