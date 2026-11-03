@@ -33,9 +33,9 @@ export const heroMedia = {
   imageAlt:
     "Bright, modern manufacturing hall with CNC machining cells and automated workstations",
   video: {
-    src: "/videos/hero-coating-roller.mp4",
+    src: "/videos/hero-leather-roller.mp4",
     type: "video/mp4",
-    poster: "/images/hero-coating-roller-poster.webp",
+    poster: "/images/hero-leather-roller-poster.webp",
   } as null | { src: string; type: "video/mp4" | "video/webm"; poster: string },
 }
 
@@ -79,8 +79,8 @@ export const productCategories: ProductCategory[] = [
     index: "02",
     title: "Foam",
     summary: "A broad portfolio of foam materials for diverse industrial requirements.",
-    image: "/images/foam-v2.webp",
-    imageAlt: "Macro view of open-cell foam structure",
+    image: "/images/foam-car-seat.webp",
+    imageAlt: "Close-up of a padded car seat cushion and headrest",
     products: [
       "Mesh",
       "Reticulated Foam",

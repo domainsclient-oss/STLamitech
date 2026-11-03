@@ -19,7 +19,7 @@ type CapabilityCardProps = {
   index: number
 }
 
-/** Dark capability tile; photography fades in behind the content on hover/focus. */
+/** Capability tile with full-colour photography behind the content. */
 export function CapabilityCard({ icon, title, description, image, imageAlt, index }: CapabilityCardProps) {
   const Icon = icons[icon]
   return (
@@ -33,16 +33,16 @@ export function CapabilityCard({ icon, title, description, image, imageAlt, inde
         alt={imageAlt}
         fill
         sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
-        className="-z-20 scale-110 object-cover grayscale transition-[transform,filter] duration-[1.2s] ease-(--ease-premium) group-hover:scale-100 group-hover:grayscale-[30%]"
+        className="-z-20 scale-110 object-cover transition-transform duration-[1.2s] ease-(--ease-premium) group-hover:scale-100"
       />
-      <div className="absolute inset-0 -z-10 bg-charcoal/85 transition-colors duration-700 group-hover:bg-charcoal-deep/60" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[linear-gradient(0deg,rgba(28,28,28,0.9),transparent)]" />
+      {/* Bottom-only scrim keeps the white title and copy legible over bright photos. */}
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-3/4 bg-[linear-gradient(0deg,rgba(28,28,28,0.92)_0%,rgba(28,28,28,0.75)_45%,rgba(28,28,28,0.35)_75%,transparent_100%)]" />
 
       <div className="flex items-start justify-between">
-        <span className="flex size-16 items-center justify-center border border-white/20 transition-colors duration-500 group-hover:border-white group-hover:bg-white">
+        <span className="flex size-16 items-center justify-center border border-white/30 bg-charcoal-deep/55 backdrop-blur-sm transition-colors duration-500 group-hover:border-white group-hover:bg-white">
           <Icon aria-hidden="true" strokeWidth={1.25} className="size-7 text-white transition-colors duration-500 group-hover:text-charcoal" />
         </span>
-        <span className="font-heading text-sm tracking-widest text-white/40">0{index + 1}</span>
+        <span className="bg-charcoal-deep/55 px-2 py-1 font-heading text-sm tracking-widest text-white/85 backdrop-blur-sm">0{index + 1}</span>
       </div>
 
       <div>

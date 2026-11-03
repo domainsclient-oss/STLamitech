@@ -23,7 +23,7 @@ export function CustomerCarousel() {
               return (
                 <li
                   key={`${copy}-${customer.file}`}
-                  className="flex h-28 w-52 shrink-0 items-center justify-center border-r border-border px-6 opacity-60 grayscale transition-[filter,opacity] duration-500 hover:opacity-100 hover:grayscale-0 md:h-32 md:w-64"
+                  className="flex h-28 w-52 shrink-0 items-center justify-center border-r border-border px-6 md:h-32 md:w-64"
                 >
                   <Image
                     src={`/images/customers/${customer.file}`}
