@@ -77,10 +77,10 @@ export function HeroSection() {
             className="hero-rise mt-10 flex flex-col gap-3 sm:flex-row"
             style={{ "--delay": "800ms" } as React.CSSProperties}
           >
-            <ButtonLink href="#products" variant="light">
+            <ButtonLink href="/products" variant="light">
               Explore Our Capabilities
             </ButtonLink>
-            <ButtonLink href="#contact" variant="outlineLight">
+            <ButtonLink href="/contact" variant="outlineLight">
               Contact Our Team
             </ButtonLink>
           </div>

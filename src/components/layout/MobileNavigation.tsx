@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useEffect, useRef } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { contactDetails, navLinks } from "@/lib/site"
@@ -9,9 +10,10 @@ type MobileNavigationProps = {
   open: boolean
   onOpenChange: (open: boolean) => void
   light: boolean
+  pathname: string
 }
 
-export function MobileNavigation({ open, onOpenChange, light }: MobileNavigationProps) {
+export function MobileNavigation({ open, onOpenChange, light, pathname }: MobileNavigationProps) {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
 
@@ -87,10 +89,14 @@ export function MobileNavigation({ open, onOpenChange, light }: MobileNavigation
                 )}
                 style={{ transitionDelay: open ? `${150 + i * 60}ms` : "0ms" }}
               >
-                <a
+                <Link
                   href={link.href}
+                  aria-current={pathname === link.href ? "page" : undefined}
                   onClick={() => onOpenChange(false)}
-                  className="group flex items-baseline gap-4 border-b border-white/10 py-4 font-heading text-3xl font-medium tracking-tight sm:text-4xl"
+                  className={cn(
+                    "group flex items-baseline gap-4 border-b border-white/10 py-4 font-heading text-3xl font-medium tracking-tight sm:text-4xl",
+                    pathname === link.href ? "text-white" : "text-white/70",
+                  )}
                 >
                   <span className="text-xs font-normal tracking-widest text-white/40">
                     {String(i + 1).padStart(2, "0")}
@@ -98,7 +104,7 @@ export function MobileNavigation({ open, onOpenChange, light }: MobileNavigation
                   <span className="transition-transform duration-500 ease-(--ease-premium) group-hover:translate-x-2">
                     {link.label}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -112,13 +118,13 @@ export function MobileNavigation({ open, onOpenChange, light }: MobileNavigation
           <a href={`mailto:${contactDetails.email}`} className="hover:text-white">
             {contactDetails.email}
           </a>
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             onClick={() => onOpenChange(false)}
             className="inline-flex items-center gap-2 bg-white px-5 py-3 font-medium text-charcoal"
           >
             Get in Touch <ArrowUpRight aria-hidden="true" className="size-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </>

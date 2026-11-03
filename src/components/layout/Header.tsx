@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { navLinks } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -10,6 +12,7 @@ import { MobileNavigation } from "./MobileNavigation"
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -41,38 +44,49 @@ export function Header() {
           solid ? "h-18" : "h-20 md:h-24",
         )}
       >
-        <a href="#home" aria-label="STLamitech — back to top" className="relative z-50">
+        <Link href="/" aria-label="STLamitech — home" className="relative z-50">
           <Logo tone={solid ? "dark" : "light"} className="transition-colors duration-500" />
-        </a>
+        </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-7 xl:gap-10">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className={cn(
-                    "group relative py-2 text-[0.9375rem] font-medium tracking-wide xl:text-base transition-colors duration-300",
-                    solid ? "text-charcoal/80 hover:text-charcoal" : "text-white/80 hover:text-white",
-                  )}
-                >
-                  {link.label}
-                  <span className="absolute inset-x-0 bottom-0 h-px origin-right scale-x-0 bg-current transition-transform duration-500 ease-(--ease-premium) group-hover:origin-left group-hover:scale-x-100" />
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const active = pathname === link.href
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={active ? "page" : undefined}
+                    className={cn(
+                      "group relative py-2 text-[0.9375rem] font-medium tracking-wide xl:text-base transition-colors duration-300",
+                      solid
+                        ? active ? "text-charcoal" : "text-charcoal/80 hover:text-charcoal"
+                        : active ? "text-white" : "text-white/80 hover:text-white",
+                    )}
+                  >
+                    {link.label}
+                    <span
+                      className={cn(
+                        "absolute inset-x-0 bottom-0 h-px bg-current transition-[scale] duration-500 ease-(--ease-premium)",
+                        active ? "scale-x-100" : "origin-right scale-x-0 group-hover:origin-left group-hover:scale-x-100",
+                      )}
+                    />
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </nav>
 
         <div className="flex items-center gap-3">
           <ButtonLink
-            href="#contact"
+            href="/contact"
             variant={solid ? "solid" : "light"}
             className="hidden h-11 px-5 sm:inline-flex"
           >
             Get in Touch
           </ButtonLink>
-          <MobileNavigation open={menuOpen} onOpenChange={setMenuOpen} light={!solid} />
+          <MobileNavigation open={menuOpen} onOpenChange={setMenuOpen} light={!solid} pathname={pathname} />
         </div>
       </div>
     </header>

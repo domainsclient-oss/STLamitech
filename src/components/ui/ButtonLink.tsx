@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import type { ComponentProps } from "react"
 import { cn } from "@/lib/utils"
@@ -9,14 +10,17 @@ const variants = {
   outlineDark: "border border-charcoal/25 text-charcoal hover:border-charcoal hover:bg-charcoal hover:text-white",
 } as const
 
-type ButtonLinkProps = ComponentProps<"a"> & {
+/** Anchor props with a required href; rendered through next/link for client-side navigation. */
+type LinkProps = Omit<ComponentProps<"a">, "href"> & { href: string }
+
+type ButtonLinkProps = LinkProps & {
   variant?: keyof typeof variants
   icon?: boolean
 }
 
 export function ButtonLink({ variant = "solid", icon = true, className, children, ...props }: ButtonLinkProps) {
   return (
-    <a
+    <Link
       className={cn(
         "group/btn relative inline-flex h-13 items-center justify-center gap-3 overflow-hidden px-7 text-sm font-medium tracking-wide transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current",
         variants[variant],
@@ -31,14 +35,14 @@ export function ButtonLink({ variant = "solid", icon = true, className, children
           className="size-4 transition-transform duration-300 ease-(--ease-premium) group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
         />
       )}
-    </a>
+    </Link>
   )
 }
 
 /** Minimal underline-style text link with arrow. */
-export function TextLink({ className, children, tone = "dark", ...props }: ComponentProps<"a"> & { tone?: "dark" | "light" }) {
+export function TextLink({ className, children, tone = "dark", ...props }: LinkProps & { tone?: "dark" | "light" }) {
   return (
-    <a
+    <Link
       className={cn(
         "group/link inline-flex items-center gap-3 text-sm font-medium tracking-wide focus-visible:outline-2 focus-visible:outline-offset-4",
         tone === "dark" ? "text-charcoal" : "text-white",
@@ -59,6 +63,6 @@ export function TextLink({ className, children, tone = "dark", ...props }: Compo
           )}
         />
       </span>
-    </a>
+    </Link>
   )
 }

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { contactDetails, navLinks, productCategories } from "@/lib/site"
 import { Logo } from "@/components/ui/Logo"
@@ -44,7 +45,8 @@ export function Footer() {
         <FooterColumn title="Solutions" className="lg:col-span-2">
           {productCategories.map((category) => (
             <li key={category.id}>
-              <FooterLink href={`#${category.id}`}>{category.title}</FooterLink>            </li>
+              <FooterLink href={`/products#${category.id}`}>{category.title}</FooterLink>
+            </li>
           ))}
         </FooterColumn>
 
@@ -82,7 +84,7 @@ export function Footer() {
           <p>
             © <CopyrightYear /> ST LAMITECH INDIA PRIVATE LIMITED. All rights reserved.
           </p>
-          <a href="#home" className="transition-colors hover:text-white">
+          <a href="#top" className="transition-colors hover:text-white">
             Back to top ↑
           </a>
         </div>
@@ -102,8 +104,8 @@ function FooterColumn({ title, className, children }: { title: string; className
 
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <a href={href} className="text-sm text-white/75 transition-colors duration-300 hover:text-white">
+    <Link href={href} className="text-sm text-white/75 transition-colors duration-300 hover:text-white">
       {children}
-    </a>
+    </Link>
   )
 }

@@ -24,7 +24,7 @@ export function ProductsSection() {
           <p className="text-sm text-graphite">
             {productCategories.length} solution categories · {total} product lines
           </p>
-          <ButtonLink href="#contact">Explore Our Solutions</ButtonLink>
+          <ButtonLink href="/contact">Explore Our Solutions</ButtonLink>
         </Reveal>
       </div>
     </section>

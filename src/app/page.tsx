@@ -1,5 +1,3 @@
-import { Header } from "@/components/layout/Header"
-import { Footer } from "@/components/layout/Footer"
 import { HeroSection } from "@/components/sections/HeroSection"
 import { AboutSection } from "@/components/sections/AboutSection"
 import { CertificationsSection } from "@/components/sections/CertificationsSection"
@@ -26,18 +24,14 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c") }}
       />
-      <Header />
-      <main id="main" className="flex-1">
-        <HeroSection />
-        <AboutSection />
-        <CertificationsSection />
-        <CustomersSection />
-        <ProductsSection />
-        <FacilitiesSection />
-        <CapabilitiesSection />
-        <ContactSection />
-      </main>
-      <Footer />
+      <HeroSection />
+      <AboutSection />
+      <CertificationsSection />
+      <CustomersSection />
+      <ProductsSection />
+      <FacilitiesSection />
+      <CapabilitiesSection />
+      <ContactSection />
     </>
   )
 }

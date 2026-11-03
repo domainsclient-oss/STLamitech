@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Geist, Geist_Mono } from "next/font/google";
 import { site } from "@/lib/site";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,7 +24,7 @@ const title = "STLamitech — Lamination, Foam & Scrim Material Solutions";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title,
+  title: { default: title, template: "%s — STLamitech" },
   description: site.description,
   applicationName: site.name,
   alternates: { canonical: "/" },
@@ -65,7 +67,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important}[data-reveal=image]::after{display:none}.hero-rise{opacity:1!important;animation:none!important}`}</style>
         </noscript>
-        {children}
+        <Header />
+        <main id="main" className="flex-1">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

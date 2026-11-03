@@ -15,12 +15,12 @@ export const site = {
 } as const
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Products & Services", href: "#products" },
-  { label: "Facilities", href: "#facilities" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "Products & Services", href: "/products" },
+  { label: "Facilities", href: "/facilities" },
+  { label: "Contact", href: "/contact" },
 ] as const
 
 /**

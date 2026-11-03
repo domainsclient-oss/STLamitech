@@ -8,15 +8,21 @@ const focusAreas = [
   { title: "Customer-Focused Solutions", text: "Material solutions shaped around each customer’s requirements." },
 ]
 
-export function AboutSection() {
+const defaultImage = {
+  src: "/images/about-plant-v4.webp",
+  alt: "Engineers reviewing technical data on a tablet beside a CNC machine on the shop floor",
+}
+
+/** `image` lets inner pages use a different photo from the home page. */
+export function AboutSection({ image = defaultImage }: { image?: { src: string; alt: string } }) {
   return (
     <section id="about" aria-labelledby="about-title" className="bg-white py-24 md:py-32 xl:py-40">
       <div className="container-page grid gap-14 lg:grid-cols-12 lg:gap-16 xl:gap-24">
         <div className="relative lg:col-span-6">
           <Reveal variant="image" className="relative aspect-[4/5] overflow-hidden bg-mist sm:aspect-[4/3] lg:aspect-[4/5]">
             <Image
-              src="/images/about-plant-v4.webp"
-              alt="Engineers reviewing technical data on a tablet beside a CNC machine on the shop floor"
+              src={image.src}
+              alt={image.alt}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover grayscale-[40%]"
@@ -70,7 +76,7 @@ export function AboutSection() {
           </ul>
 
           <Reveal delay={400} className="mt-10">
-            <TextLink href="#products">Discover Our Capabilities</TextLink>
+            <TextLink href="/products">Discover Our Capabilities</TextLink>
           </Reveal>
         </div>
       </div>
