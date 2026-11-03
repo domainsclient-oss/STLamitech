@@ -59,22 +59,25 @@ export function CertificateLightbox({ title, image, imageAlt }: CertificateLight
         ref={dialogRef}
         aria-label={`${title} certificate`}
         onClick={(e) => e.target === e.currentTarget && close()}
-        className="certificate-dialog m-auto max-h-[92svh] w-[min(92vw,40rem,calc((92svh-2rem)*0.7075+2rem))] overflow-visible bg-transparent p-0 backdrop:bg-charcoal-deep/85 backdrop:backdrop-blur-sm"
+        className="certificate-dialog m-auto max-h-[92svh] w-[min(92vw,40rem,calc((92svh-4.5rem)*0.7075+2rem))] overflow-visible bg-transparent p-0 backdrop:bg-charcoal-deep/85 backdrop:backdrop-blur-sm"
       >
-        <div className="relative bg-white p-3 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)] sm:p-4">
+        <div className="bg-white px-3 pb-3 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)] sm:px-4 sm:pb-4">
+          {/* Close sits in the white frame's top margin, above the certificate rather than over it. */}
+          <div className="flex justify-end py-1 -mr-2 sm:-mr-3">
+            <button
+              type="button"
+              onClick={close}
+              autoFocus
+              aria-label="Close"
+              className="flex size-8 items-center justify-center text-charcoal transition-colors hover:bg-mist focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-charcoal"
+            >
+              <X aria-hidden="true" className="size-5" />
+            </button>
+          </div>
           {/* Dialog width is capped by viewport height × the certificate's 600:848 ratio, so the portrait page fits without letterboxing. */}
           <div className="relative aspect-[600/848] w-full">
             <Image src={image} alt={imageAlt} fill sizes="(min-width: 640px) 40rem, 92vw" unoptimized={svg} className="object-contain" />
           </div>
-          <button
-            type="button"
-            onClick={close}
-            autoFocus
-            aria-label="Close"
-            className="absolute top-3 right-3 z-10 flex size-10 items-center justify-center bg-charcoal text-white transition-colors hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal sm:top-4 sm:right-4"
-          >
-            <X aria-hidden="true" className="size-5" />
-          </button>
         </div>
       </dialog>
     </>
