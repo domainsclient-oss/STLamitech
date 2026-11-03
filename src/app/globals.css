@@ -282,7 +282,30 @@
   animation-play-state: paused;
 }
 
+/* ---------- Certificate lightbox ---------- */
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(0.97);
+  }
+}
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+.certificate-dialog[open] {
+  animation: dialog-in 0.45s var(--ease-premium);
+}
+.certificate-dialog[open]::backdrop {
+  animation: backdrop-in 0.35s ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .certificate-dialog[open],
+  .certificate-dialog[open]::backdrop {
+    animation: none;
+  }
   [data-reveal],
   [data-reveal="image"] img {
     opacity: 1 !important;

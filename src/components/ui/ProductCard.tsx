@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import type { ProductCategory } from "@/lib/site"
 import { Reveal } from "./Reveal"
@@ -39,12 +40,14 @@ export function ProductCard({ category, order }: { category: ProductCategory; or
         <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">{category.summary}</p>
         <ul className="mt-7 border-t border-white/20">
           {category.products.map((product) => (
-            <li
-              key={product}
-              className="flex items-center justify-between border-b border-white/10 py-2.5 text-sm text-white/90 transition-[padding] duration-500 ease-(--ease-premium) group-hover:pl-1"
-            >
-              {product}
-              <span aria-hidden="true" className="h-px w-3 bg-white/40" />
+            <li key={product.id} className="border-b border-white/10">
+              <Link
+                href={`/products#${product.id}`}
+                className="group/item flex items-center justify-between py-2.5 text-sm text-white/90 transition-[padding,color] duration-500 ease-(--ease-premium) group-hover:pl-1 hover:text-white"
+              >
+                {product.name}
+                <span aria-hidden="true" className="h-px w-3 bg-white/40 transition-[width,background-color] duration-500 group-hover/item:w-6 group-hover/item:bg-white" />
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { CertificateLightbox } from "./CertificateLightbox"
 import { Reveal } from "./Reveal"
 
 type CertificationCardProps = {
@@ -60,16 +60,7 @@ export function CertificationCard({ code, title, description, image, imageAlt, i
           <h3 className="mt-6 font-heading text-xl font-medium text-charcoal md:text-2xl">{title}</h3>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-graphite md:text-base">{description}</p>
         </div>
-        <div className="relative aspect-[600/848] w-36 shrink-0 overflow-hidden border border-charcoal/10 bg-white shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] transition-[translate,rotate] duration-700 ease-(--ease-premium) group-hover:-translate-y-1 group-hover:-rotate-1 md:w-40 xl:w-44">
-          <Image
-            src={image}
-            alt={imageAlt}
-            fill
-            sizes="(min-width: 1280px) 176px, 160px"
-            unoptimized={image.endsWith(".svg")}
-            className="object-cover"
-          />
-        </div>
+        <CertificateLightbox title={title} image={image} imageAlt={imageAlt} />
       </div>
     </Reveal>
   )
