@@ -23,12 +23,20 @@ export const navLinks = [
   { label: "Contact", href: "#contact" },
 ] as const
 
-/** Optional hero background video. Set `src` to a licensed MP4/WebM in /public to enable it. */
+/**
+ * Hero background. The video (licensed, Magnific Premium) plays as a seamless loop;
+ * the still image is shown to users who prefer reduced motion. Set `video` to null to
+ * fall back to the image only.
+ */
 export const heroMedia = {
-  image: "/images/hero-production-line.webp",
+  image: "/images/hero-production-line-v3.webp",
   imageAlt:
-    "Automated production line with robotic handling and roller conveyors inside a large manufacturing hall",
-  video: null as null | { src: string; type: "video/mp4" | "video/webm" },
+    "Bright, modern manufacturing hall with CNC machining cells and automated workstations",
+  video: {
+    src: "/videos/hero-coating-roller.mp4",
+    type: "video/mp4",
+    poster: "/images/hero-coating-roller-poster.webp",
+  } as null | { src: string; type: "video/mp4" | "video/webm"; poster: string },
 }
 
 export const certifications = [
@@ -62,8 +70,8 @@ export const productCategories: ProductCategory[] = [
     index: "01",
     title: "Laminations",
     summary: "Bonding processes that combine materials into engineered composites.",
-    image: "/images/laminations.webp",
-    imageAlt: "Rolls of white technical textile stacked side by side",
+    image: "/images/laminations-v2.webp",
+    imageAlt: "Rows of material rolls on an industrial production line",
     products: ["Flame Laminations", "Hot Melt Lamination", "PUR Lamination"],
   },
   {
@@ -71,8 +79,8 @@ export const productCategories: ProductCategory[] = [
     index: "02",
     title: "Foam",
     summary: "A broad portfolio of foam materials for diverse industrial requirements.",
-    image: "/images/foam.webp",
-    imageAlt: "Close-up of grey profiled foam surface with a convoluted texture",
+    image: "/images/foam-v2.webp",
+    imageAlt: "Macro view of open-cell foam structure",
     products: [
       "Mesh",
       "Reticulated Foam",
@@ -88,8 +96,8 @@ export const productCategories: ProductCategory[] = [
     index: "03",
     title: "Scrim",
     summary: "Reinforcement textiles in a range of constructions.",
-    image: "/images/scrim.webp",
-    imageAlt: "Macro view of a woven grey textile structure",
+    image: "/images/scrim-v2.webp",
+    imageAlt: "Rolls of woven fiberglass reinforcement fabric",
     products: ["Mono Scrim", "Warp Netted Scrim", "Circular Knitted Scrim"],
   },
 ]
@@ -102,8 +110,8 @@ export const facilities = [
     // Placeholder — replace with an approved facility description.
     description:
       "Facility description to be provided. This space is reserved for an overview of the Chennai site’s operations and capabilities.",
-    image: "/images/facility-chennai.webp",
-    imageAlt: "Row of industrial processing machinery on a factory floor",
+    image: "/images/facility-chennai-v2.webp",
+    imageAlt: "Clean, modern manufacturing plant interior",
   },
   {
     id: "pune",
@@ -112,8 +120,8 @@ export const facilities = [
     // Placeholder — replace with an approved facility description.
     description:
       "Facility description to be provided. This space is reserved for an overview of the Pune site’s operations and capabilities.",
-    image: "/images/facility-pune.webp",
-    imageAlt: "Interior of a large manufacturing hall with overhead steel structure",
+    image: "/images/facility-pune-v2.webp",
+    imageAlt: "Large manufacturing hall with symmetrical production bays",
   },
 ] as const
 
@@ -124,8 +132,8 @@ export const capabilities = [
     title: "Lab Facility",
     description:
       "Professional laboratory infrastructure supporting material testing and quality evaluation.",
-    image: "/images/lab.webp",
-    imageAlt: "Technicians in clean-room suits working with laboratory equipment",
+    image: "/images/lab-v3.webp",
+    imageAlt: "Engineer inspecting a precision component under an industrial microscope",
   },
   {
     id: "storage",
@@ -133,8 +141,8 @@ export const capabilities = [
     title: "Storage Facility",
     description:
       "Organized storage infrastructure designed for efficient material handling and inventory management.",
-    image: "/images/storage.webp",
-    imageAlt: "Warehouse aisle with high racks stacked with palletised goods",
+    image: "/images/storage-v2.webp",
+    imageAlt: "Modern warehouse aisle with tall storage racking",
   },
   {
     id: "transport",
@@ -142,8 +150,8 @@ export const capabilities = [
     title: "Own Transport",
     description:
       "Dedicated transportation capabilities supporting dependable logistics and material movement.",
-    image: "/images/transport.webp",
-    imageAlt: "Freight trucks travelling along a highway",
+    image: "/images/transport-v3.webp",
+    imageAlt: "White long-haul freight truck on a highway",
   },
   {
     id: "packing",
@@ -151,8 +159,8 @@ export const capabilities = [
     title: "Automotive Packing Standard",
     description:
       "Automotive-oriented packing standards and packaging practices designed to support material protection and handling requirements.",
-    image: "/images/packing.webp",
-    imageAlt: "Forklift placing a pallet of packed cartons onto warehouse racking",
+    image: "/images/packing-v2.webp",
+    imageAlt: "Pallet of cartons being stretch-wrapped for shipment",
   },
 ] as const
 

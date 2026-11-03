@@ -26,13 +26,14 @@ export function HeroSection() {
             />
             {heroMedia.video && (
               <video
-                className="absolute inset-0 size-full object-cover grayscale-[55%] motion-reduce:hidden"
+                // Mirrored so the coating roller sits on the right, clear of the headline.
+                className="absolute inset-0 size-full -scale-x-100 object-cover grayscale-[40%] motion-reduce:hidden"
                 autoPlay
                 muted
                 loop
                 playsInline
-                preload="metadata"
-                poster={heroMedia.image}
+                preload="auto"
+                poster={heroMedia.video.poster}
                 aria-hidden="true"
               >
                 <source src={heroMedia.video.src} type={heroMedia.video.type} />
@@ -41,7 +42,7 @@ export function HeroSection() {
           </div>
         </Parallax>
         {/* Overlay layers for legibility and cinematic depth */}
-        <div className="absolute inset-0 bg-charcoal-deep/65" />
+        <div className="absolute inset-0 bg-charcoal-deep/50" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,20,20,0.85)_0%,rgba(20,20,20,0.35)_60%,rgba(20,20,20,0.1)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[linear-gradient(0deg,rgba(20,20,20,0.9),transparent)]" />
       </div>

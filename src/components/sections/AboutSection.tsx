@@ -15,8 +15,8 @@ export function AboutSection() {
         <div className="relative lg:col-span-6">
           <Reveal variant="image" className="relative aspect-[4/5] overflow-hidden bg-mist sm:aspect-[4/3] lg:aspect-[4/5]">
             <Image
-              src="/images/about-plant.webp"
-              alt="Material processing line with conveyor rollers and robotic handling in a manufacturing plant"
+              src="/images/about-plant-v4.webp"
+              alt="Engineers reviewing technical data on a tablet beside a CNC machine on the shop floor"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover grayscale-[40%]"

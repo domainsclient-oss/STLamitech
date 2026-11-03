@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/hero-production-line.webp",
+        url: "/images/hero-production-line-v3.webp",
         width: 2560,
-        height: 1707,
+        height: 1396,
         alt: "STLamitech — advanced material solutions",
       },
     ],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description: site.description,
-    images: ["/images/hero-production-line.webp"],
+    images: ["/images/hero-production-line-v3.webp"],
   },
 };
 
