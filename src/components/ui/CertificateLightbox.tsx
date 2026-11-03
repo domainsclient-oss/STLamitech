@@ -59,25 +59,22 @@ export function CertificateLightbox({ title, image, imageAlt }: CertificateLight
         ref={dialogRef}
         aria-label={`${title} certificate`}
         onClick={(e) => e.target === e.currentTarget && close()}
-        className="certificate-dialog m-auto max-h-[92svh] w-[min(92vw,40rem,calc((92svh-5.5rem)*0.7075+2rem))] overflow-visible bg-transparent p-0 backdrop:bg-charcoal-deep/85 backdrop:backdrop-blur-sm"
+        className="certificate-dialog m-auto max-h-[92svh] w-[min(92vw,40rem,calc((92svh-2rem)*0.7075+2rem))] overflow-visible bg-transparent p-0 backdrop:bg-charcoal-deep/85 backdrop:backdrop-blur-sm"
       >
         <div className="relative bg-white p-3 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)] sm:p-4">
           {/* Dialog width is capped by viewport height × the certificate's 600:848 ratio, so the portrait page fits without letterboxing. */}
           <div className="relative aspect-[600/848] w-full">
             <Image src={image} alt={imageAlt} fill sizes="(min-width: 640px) 40rem, 92vw" unoptimized={svg} className="object-contain" />
           </div>
-          <div className="flex items-center justify-between gap-4 pt-3 sm:pt-4">
-            <p className="font-heading text-sm font-medium text-charcoal">{title}</p>
-            <button
-              type="button"
-              onClick={close}
-              autoFocus
-              className="inline-flex h-10 items-center gap-2 bg-charcoal px-4 text-xs font-medium tracking-wide text-white transition-colors hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
-            >
-              <X aria-hidden="true" className="size-4" />
-              Close
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={close}
+            autoFocus
+            aria-label="Close"
+            className="absolute top-3 right-3 z-10 flex size-10 items-center justify-center bg-charcoal text-white transition-colors hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal sm:top-4 sm:right-4"
+          >
+            <X aria-hidden="true" className="size-5" />
+          </button>
         </div>
       </dialog>
     </>
