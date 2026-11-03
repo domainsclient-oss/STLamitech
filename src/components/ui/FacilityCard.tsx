@@ -21,7 +21,7 @@ export function FacilityCard({ id, location, title, description, image, imageAlt
           alt={imageAlt}
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover grayscale-[50%] transition-[transform,filter] duration-[1.4s] ease-(--ease-premium) group-hover:scale-[1.05] group-hover:grayscale-0"
+          className="object-cover grayscale-[50%] transition-[scale,filter] duration-[1.4s] ease-(--ease-premium) group-hover:scale-[1.05] group-hover:grayscale-0"
         />
         <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(28,28,28,0.75),rgba(28,28,28,0)_55%)]" />
         <p className="eyebrow absolute bottom-6 left-6 flex items-center gap-2 text-white md:bottom-8 md:left-8">

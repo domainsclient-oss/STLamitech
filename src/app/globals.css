@@ -178,10 +178,17 @@
 [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 28px, 0);
+  /* Unlayered, so this beats Tailwind transition utilities on revealed elements.
+     Hover properties are listed too (without the reveal delay) so card hover
+     states still ease instead of snapping. */
   transition:
-    opacity 0.9s var(--ease-premium),
-    transform 0.9s var(--ease-premium);
-  transition-delay: var(--reveal-delay, 0ms);
+    opacity 0.9s var(--ease-premium) var(--reveal-delay, 0ms),
+    transform 0.9s var(--ease-premium) var(--reveal-delay, 0ms),
+    translate 0.5s var(--ease-premium),
+    scale 0.5s var(--ease-premium),
+    background-color 0.5s var(--ease-premium),
+    border-color 0.5s var(--ease-premium),
+    box-shadow 0.5s var(--ease-premium);
 }
 [data-reveal="fade"] {
   transform: none;

@@ -13,7 +13,7 @@ export function CertificationCard({ code, title, description, index }: Certifica
     <Reveal
       as="article"
       delay={index * 120}
-      className="group relative flex min-h-[22rem] flex-col justify-between overflow-hidden border border-border bg-mist p-8 transition-[transform,box-shadow,background-color] duration-500 ease-(--ease-premium) hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] md:p-12"
+      className="group relative flex min-h-[22rem] flex-col justify-between overflow-hidden border border-border bg-mist p-8 transition-[translate,box-shadow,background-color] duration-500 ease-(--ease-premium) hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] md:p-12"
     >
       {/* Certificate seal motif */}
       <svg

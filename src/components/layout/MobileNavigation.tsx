@@ -82,7 +82,7 @@ export function MobileNavigation({ open, onOpenChange, light }: MobileNavigation
               <li
                 key={link.href}
                 className={cn(
-                  "overflow-hidden transition-[opacity,transform] duration-700 ease-(--ease-premium)",
+                  "overflow-hidden transition-[opacity,translate] duration-700 ease-(--ease-premium)",
                   open ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
                 )}
                 style={{ transitionDelay: open ? `${150 + i * 60}ms` : "0ms" }}

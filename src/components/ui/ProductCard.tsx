@@ -18,7 +18,7 @@ export function ProductCard({ category, order }: { category: ProductCategory; or
         alt={category.imageAlt}
         fill
         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-        className="-z-20 object-cover grayscale-[65%] transition-[transform,filter] duration-[1.4s] ease-(--ease-premium) group-hover:scale-[1.06] group-hover:grayscale-[20%]"
+        className="-z-20 object-cover grayscale-[65%] transition-[scale,filter] duration-[1.4s] ease-(--ease-premium) group-hover:scale-[1.06] group-hover:grayscale-[20%]"
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(28,28,28,0.55)_0%,rgba(28,28,28,0.35)_35%,rgba(28,28,28,0.92)_75%)] transition-opacity duration-700 group-hover:opacity-90" />
 
@@ -27,7 +27,7 @@ export function ProductCard({ category, order }: { category: ProductCategory; or
         <span className="flex size-11 items-center justify-center border border-white/30 transition-[background-color,border-color] duration-500 group-hover:border-white group-hover:bg-white">
           <ArrowUpRight
             aria-hidden="true"
-            className="size-4 transition-[transform,color] duration-500 ease-(--ease-premium) group-hover:rotate-45 group-hover:text-charcoal"
+            className="size-4 transition-[rotate,color] duration-500 ease-(--ease-premium) group-hover:rotate-45 group-hover:text-charcoal"
           />
         </span>
       </div>

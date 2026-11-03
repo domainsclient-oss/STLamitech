@@ -26,7 +26,7 @@ export function CapabilityCard({ icon, title, description, image, imageAlt, inde
     <Reveal
       as="article"
       delay={index * 110}
-      className="group relative isolate flex min-h-[24rem] flex-col justify-between overflow-hidden border border-white/10 bg-white/[0.03] p-7 transition-[border-color,transform] duration-500 ease-(--ease-premium) hover:-translate-y-1 hover:border-white/30 md:min-h-[28rem] md:p-9"
+      className="group relative isolate flex min-h-[24rem] flex-col justify-between overflow-hidden border border-white/10 bg-white/[0.03] p-7 transition-[border-color,translate] duration-500 ease-(--ease-premium) hover:-translate-y-1 hover:border-white/30 md:min-h-[28rem] md:p-9"
     >
       <Image
         src={image}
