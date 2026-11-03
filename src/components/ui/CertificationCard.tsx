@@ -1,14 +1,17 @@
+import Image from "next/image"
 import { Reveal } from "./Reveal"
 
 type CertificationCardProps = {
   code: string
   title: string
   description: string
+  image: string
+  imageAlt: string
   index: number
 }
 
 /** Certificate-style card. Intentionally contains no certificate numbers or issuer details. */
-export function CertificationCard({ code, title, description, index }: CertificationCardProps) {
+export function CertificationCard({ code, title, description, image, imageAlt, index }: CertificationCardProps) {
   return (
     <Reveal
       as="article"
@@ -48,13 +51,25 @@ export function CertificationCard({ code, title, description, index }: Certifica
         <span className="eyebrow text-steel">Certified</span>
       </div>
 
-      <div className="relative">
-        <p className="font-heading text-7xl leading-none font-semibold tracking-tighter text-charcoal md:text-8xl">
-          {code}
-        </p>
-        <div className="mt-6 h-px w-12 bg-charcoal transition-[width] duration-700 ease-(--ease-premium) group-hover:w-24" />
-        <h3 className="mt-6 font-heading text-xl font-medium text-charcoal md:text-2xl">{title}</h3>
-        <p className="mt-3 max-w-md text-sm leading-relaxed text-graphite md:text-base">{description}</p>
+      <div className="relative mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+        <div className="min-w-0">
+          <p className="font-heading text-7xl leading-none font-semibold tracking-tighter text-charcoal md:text-8xl">
+            {code}
+          </p>
+          <div className="mt-6 h-px w-12 bg-charcoal transition-[width] duration-700 ease-(--ease-premium) group-hover:w-24" />
+          <h3 className="mt-6 font-heading text-xl font-medium text-charcoal md:text-2xl">{title}</h3>
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-graphite md:text-base">{description}</p>
+        </div>
+        <div className="relative aspect-[600/848] w-36 shrink-0 overflow-hidden border border-charcoal/10 bg-white shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] transition-[translate,rotate] duration-700 ease-(--ease-premium) group-hover:-translate-y-1 group-hover:-rotate-1 md:w-40 xl:w-44">
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            sizes="(min-width: 1280px) 176px, 160px"
+            unoptimized={image.endsWith(".svg")}
+            className="object-cover"
+          />
+        </div>
       </div>
     </Reveal>
   )

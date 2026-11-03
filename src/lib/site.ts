@@ -39,18 +39,26 @@ export const heroMedia = {
   } as null | { src: string; type: "video/mp4" | "video/webm"; poster: string },
 }
 
+/**
+ * Certificate images are placeholders. Replace `image` with the client-supplied certificate scans
+ * (e.g. /images/certificates/iatf.jpg) and update `imageAlt` when they arrive.
+ */
 export const certifications = [
   {
     code: "IATF",
     title: "IATF Certification",
     description:
       "Quality management aligned with the automotive industry’s internationally recognised standard.",
+    image: "/images/certificates/iatf-placeholder.svg",
+    imageAlt: "IATF certificate (placeholder)",
   },
   {
     code: "ISO",
     title: "ISO Certification",
     description:
       "Quality management practices aligned with internationally recognised ISO standards.",
+    image: "/images/certificates/iso-placeholder.svg",
+    imageAlt: "ISO certificate (placeholder)",
   },
 ] as const
 

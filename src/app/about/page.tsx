@@ -1,6 +1,5 @@
 import { PageHero } from "@/components/sections/PageHero"
 import { AboutSection } from "@/components/sections/AboutSection"
-import { ProductsSection } from "@/components/sections/ProductsSection"
 import { CtaBand } from "@/components/sections/CtaBand"
 import { pageMetadata } from "@/lib/metadata"
 
@@ -28,7 +27,6 @@ export default function AboutPage() {
           alt: "Technician cutting a block of foam on a band-saw foam cutting machine",
         }}
       />
-      <ProductsSection />
       <CtaBand />
     </>
   )
