@@ -9,8 +9,8 @@ export function CustomersSection() {
         <SectionHeading
           id="customers-title"
           eyebrow="Customers"
-          title="Trusted by Our Customers"
-          description="Building strong partnerships through quality, consistency and dependable solutions."
+          title="Trusted by Vehicle & Seating Manufacturers"
+          description="Long-term partnerships built on consistent quality, dependable supply and seating materials that perform."
         />
       </div>
       <Reveal variant="fade" delay={200} className="mt-14 border-y border-border bg-white md:mt-20">

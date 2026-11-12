@@ -178,7 +178,7 @@ export function ContactForm() {
           defaultValue={state.values.message}
           aria-invalid={!!errors.message}
           aria-describedby={describedBy("message")}
-          placeholder="Tell us about your material requirements"
+          placeholder="Tell us about your seat cover, cushion or backing requirements"
           className={cn(fieldClass, "min-h-32 resize-y py-3")}
         />
       </Field>

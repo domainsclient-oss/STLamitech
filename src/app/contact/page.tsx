@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata"
 export const metadata = pageMetadata({
   path: "/contact",
   title: "Contact",
-  description: "Contact STLamitech to discuss your lamination, foam and scrim material requirements.",
+  description: "Contact STLamitech to discuss laminations, foams and scrims for your automotive seating programme.",
 })
 
 export default function ContactPage() {
@@ -14,8 +14,8 @@ export default function ContactPage() {
       <PageHero
         path="/contact"
         eyebrow="Contact"
-        title="Let’s Talk Materials."
-        description="Connect with our team to discuss your material requirements and explore the right solutions for your business."
+        title="Let’s Talk Seating."
+        description="Connect with our team about seat cover materials, cushioning and backing for your next programme."
         image="/images/facility-pune-v2.webp"
         imageAlt="Large manufacturing hall with symmetrical production bays"
       />

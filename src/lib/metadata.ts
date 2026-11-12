@@ -5,7 +5,7 @@ const ogImage = {
   url: "/images/hero-production-line-v3.webp",
   width: 2560,
   height: 1396,
-  alt: "STLamitech — advanced material solutions",
+  alt: "STLamitech — seating comfort materials",
 }
 
 /**

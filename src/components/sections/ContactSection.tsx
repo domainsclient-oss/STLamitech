@@ -22,11 +22,11 @@ export function ContactSection() {
             delay={80}
             className="text-4xl leading-[1.05] font-semibold tracking-tight text-charcoal md:text-5xl xl:text-6xl"
           >
-            Let’s Build Something Better Together.
+            Let’s Make Seats More Comfortable.
           </Reveal>
           <Reveal as="p" delay={160} className="mt-8 max-w-md text-lg leading-relaxed text-graphite">
-            Connect with our team to discuss your material requirements and explore the right solutions for your
-            business.
+            Tell us about your seating programme — cover materials, cushioning or backing — and our team will help
+            you find the right solution.
           </Reveal>
 
           <Reveal delay={240} className="mt-12 space-y-0 border-t border-border">

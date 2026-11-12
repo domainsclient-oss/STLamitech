@@ -20,7 +20,7 @@ const archivo = Archivo({
   subsets: ["latin"],
 });
 
-const title = "STLamitech — Lamination, Foam & Scrim Material Solutions";
+const title = "STLamitech — Seating Lamination, Foam & Scrim for Automotive Comfort";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "/images/hero-production-line-v3.webp",
         width: 2560,
         height: 1396,
-        alt: "STLamitech — advanced material solutions",
+        alt: "STLamitech — seating comfort materials",
       },
     ],
   },

@@ -9,8 +9,8 @@ export function FacilitiesSection() {
         <SectionHeading
           id="facilities-title"
           eyebrow="Facilities"
-          title="Manufacturing Presence. Operational Excellence."
-          description="Two manufacturing facilities in India — Chennai and Pune."
+          title="Where Seating Comfort Is Made."
+          description="Two manufacturing facilities in India — Chennai and Pune — in two of the country’s major automotive hubs."
         />
         <div className="mt-14 grid gap-16 md:mt-20 md:grid-cols-2 md:gap-6 lg:gap-8">
           {facilities.map((facility, i) => (

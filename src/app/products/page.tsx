@@ -8,7 +8,7 @@ export const metadata = pageMetadata({
   path: "/products",
   title: "Products & Services",
   description:
-    "Flame, hot melt and PUR lamination, a broad range of foams, and mono, warp netted and circular knitted scrims from STLamitech.",
+    "Flame, hot melt and PUR lamination, seating foams and backing scrims from STLamitech, engineered for the softness, support and finish of automotive seats.",
 })
 
 export default function ProductsPage() {
@@ -17,8 +17,8 @@ export default function ProductsPage() {
       <PageHero
         path="/products"
         eyebrow="Products & Services"
-        title="Laminations. Foam. Scrim."
-        description="Specialized material solutions designed for performance, flexibility and diverse industrial applications."
+        title="Every Layer of the Seat."
+        description="Laminations, foams and scrims engineered for the softness, support and finish of factory-fitted seating."
         image="/images/products-banner.webp"
         imageAlt="Worker loading yarn spools onto an industrial knitting machine in a textile factory"
       />
@@ -26,7 +26,7 @@ export default function ProductsPage() {
       <CapabilitiesSection />
       <CtaBand
         title="Not Sure Which Material Fits?"
-        description="Share your application requirements and our team will help you identify the right solution."
+        description="Share your seat cover or cushion requirements and our team will help you find the right combination."
       />
     </>
   )

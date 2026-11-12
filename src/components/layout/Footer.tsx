@@ -16,8 +16,8 @@ export function Footer() {
         <div className="lg:col-span-4">
           <Logo tone="light" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/60">
-            Advanced lamination, foam and scrim solutions engineered to meet the evolving demands of
-            modern industries.
+            Laminations, foams and scrims engineered for the softness, comfort and finish of automotive
+            seating.
           </p>
           <ul className="mt-8 flex flex-wrap gap-3" aria-label="Social media">
             {contactDetails.socials.map((social) => (

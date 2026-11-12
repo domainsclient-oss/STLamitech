@@ -12,8 +12,8 @@ export function ProductsSection() {
         <SectionHeading
           id="products-title"
           eyebrow="Products & Services"
-          title="Engineered Material Solutions"
-          description="Specialized material solutions designed for performance, flexibility and diverse industrial applications."
+          title="Every Layer of a Comfortable Seat"
+          description="The foam that cushions, the scrim that supports and the lamination that brings them together with the face fabric."
         />
         <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {productCategories.map((category, i) => (
@@ -24,7 +24,7 @@ export function ProductsSection() {
           <p className="text-sm text-graphite">
             {productCategories.length} solution categories · {total} product lines
           </p>
-          <ButtonLink href="/contact">Explore Our Solutions</ButtonLink>
+          <ButtonLink href="/contact">Talk to Our Team</ButtonLink>
         </Reveal>
       </div>
     </section>

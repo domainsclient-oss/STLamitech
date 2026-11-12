@@ -8,9 +8,9 @@
 
 export const site = {
   name: "STLamitech",
-  tagline: "Advanced Material Solutions",
+  tagline: "Seating Comfort Materials",
   description:
-    "STLamitech delivers advanced lamination, foam and scrim solutions engineered to meet the evolving demands of modern industries, with manufacturing facilities in Chennai and Pune, India.",
+    "STLamitech is a seating lamination company producing the laminated fabrics, foams and scrims behind factory-fitted car seats — engineered for softness, comfort and a clean finish. Manufacturing in Chennai and Pune, India.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 } as const
 
@@ -33,34 +33,44 @@ export const heroMedia = {
   imageAlt:
     "Bright, modern manufacturing hall with CNC machining cells and automated workstations",
   video: {
-    src: "/videos/hero-leather-roller.mp4",
+    src: "/videos/hero-beige-seats.mp4",
     type: "video/mp4",
-    poster: "/images/hero-leather-roller-poster.webp",
+    poster: "/images/hero-beige-seats-poster.webp",
   } as null | { src: string; type: "video/mp4" | "video/webm"; poster: string },
 }
 
 /**
- * Certificate images are placeholders. Replace `image` with the client-supplied certificate scans
- * (e.g. /images/certificates/iatf.jpg) and update `imageAlt` when they arrive.
+ * Certificate images are generic illustrations, so they are not zoomable. To show a real
+ * certificate scan instead, set `image` to the scan (e.g. /images/certificates/iatf.jpg), update
+ * `imageAlt`, and set `zoomable: true` to let visitors open it full size.
  */
-export const certifications = [
+export const certifications: {
+  code: string
+  title: string
+  description: string
+  image: string
+  imageAlt: string
+  zoomable: boolean
+}[] = [
   {
     code: "IATF",
     title: "IATF Certification",
     description:
-      "Quality management aligned with the automotive industry’s internationally recognised standard.",
-    image: "/images/certificates/iatf-placeholder.svg",
-    imageAlt: "IATF certificate (placeholder)",
+      "Quality management aligned with the automotive industry’s standard — the framework that keeps seating materials consistent, batch after batch.",
+    image: "/images/certificates/iatf-certificate.svg",
+    imageAlt: "Illustration of an IATF certificate",
+    zoomable: false,
   },
   {
     code: "ISO",
     title: "ISO Certification",
     description:
-      "Quality management practices aligned with internationally recognised ISO standards.",
-    image: "/images/certificates/iso-placeholder.svg",
-    imageAlt: "ISO certificate (placeholder)",
+      "Quality management aligned with internationally recognised ISO standards, from incoming material to finished laminate.",
+    image: "/images/certificates/iso-certificate.svg",
+    imageAlt: "Illustration of an ISO certificate",
+    zoomable: false,
   },
-] as const
+]
 
 export type Product = {
   /** Anchor id on /products, e.g. /products#flame-lamination */
@@ -93,17 +103,17 @@ export const productCategories: ProductCategory[] = [
   {
     id: "laminations",
     index: "01",
-    title: "Laminations",
-    summary: "Bonding processes that combine materials into engineered composites.",
+    title: "Lamination",
+    summary: "Bonding face fabrics, foams and scrims into seat-cover composites that feel soft and finish cleanly.",
     image: "/images/laminations-v2.webp",
     imageAlt: "Rows of material rolls on an industrial production line",
     products: [
       {
         id: "flame-lamination",
-        name: "Flame Laminations",
+        name: "Flame Lamination",
         description:
-          "The surface of a polyurethane foam is melted by a controlled flame and immediately pressed onto a second material, so the foam itself forms the bond — no separate adhesive layer is needed.",
-        applications: ["Automotive seat fabrics", "Headliners and door panels", "Upholstery composites"],
+          "Foam is flame-bonded directly to the seat face fabric, giving the cover a soft, padded feel without a separate adhesive layer — the classic construction behind comfortable automotive seat covers.",
+        applications: ["Seat cover fabrics", "Headrest and armrest covers", "Door and trim panels"],
         image: productImage("flame-lamination"),
         imageAlt: "Close-up of a row of blue gas flames above a steel burner bar",
       },
@@ -111,8 +121,8 @@ export const productCategories: ProductCategory[] = [
         id: "hot-melt-lamination",
         name: "Hot Melt Lamination",
         description:
-          "A thermoplastic adhesive is applied in a molten state and the layers are joined under heat and pressure. The solvent-free process bonds a wide range of textiles, foams and films.",
-        applications: ["Automotive interior trims", "Technical textiles", "Multi-layer composites"],
+          "Molten thermoplastic adhesive joins fabric, foam and scrim under heat and pressure. The solvent-free process keeps the cover supple and breathable, with a clean, even finish.",
+        applications: ["Seat cover composites", "Interior trims", "Multi-layer fabrics"],
         image: productImage("hot-melt-lamination"),
         imageAlt: "Wood-grain film being fed over steel rollers on an adhesive-applying laminating machine",
       },
@@ -120,8 +130,8 @@ export const productCategories: ProductCategory[] = [
         id: "pur-lamination",
         name: "PUR Lamination",
         description:
-          "Reactive polyurethane (PUR) hot melt adhesive cures with moisture after bonding, giving a durable, flexible bond with good resistance to heat and humidity.",
-        applications: ["Automotive interiors", "Performance textiles", "Demanding bonding applications"],
+          "Reactive PUR adhesive cures into a strong yet flexible bond that resists cabin heat and humidity, keeping seat covers smooth and well bonded in everyday use.",
+        applications: ["Premium seat covers", "Performance fabrics", "High-durability bonding"],
         image: productImage("pur-lamination"),
         imageAlt: "White nonwoven textile web running over polished rollers in a brightly lit machine",
       },
@@ -131,7 +141,7 @@ export const productCategories: ProductCategory[] = [
     id: "foam",
     index: "02",
     title: "Foam",
-    summary: "A broad portfolio of foam materials for diverse industrial requirements.",
+    summary: "The cushioning and breathable layers that give a seat its softness and support.",
     image: "/images/foam-car-seat.webp",
     imageAlt: "Close-up of a padded car seat cushion and headrest",
     products: [
@@ -139,8 +149,8 @@ export const productCategories: ProductCategory[] = [
         id: "mesh",
         name: "Mesh",
         description:
-          "Open-structure mesh fabrics that add breathability and air circulation, often combined with foam layers in seating and comfort applications.",
-        applications: ["Seat ventilation layers", "Backrests and headrests", "Breathable comfort layers"],
+          "Breathable mesh layers let air move through the seat, helping occupants stay cooler and more comfortable on longer journeys.",
+        applications: ["Seat ventilation layers", "Backrests and cushions", "Breathable comfort zones"],
         image: productImage("mesh"),
         imageAlt: "Extreme close-up of grey knitted mesh fabric with round open cells",
       },
@@ -148,8 +158,8 @@ export const productCategories: ProductCategory[] = [
         id: "reticulated-foam",
         name: "Reticulated Foam",
         description:
-          "Polyurethane foam whose cell membranes are removed to leave a fully open, porous skeleton, giving very high air and fluid permeability.",
-        applications: ["Filtration", "Sound absorption", "Air and fluid management"],
+          "Fully open-cell foam with very high air permeability, used where a seat needs to breathe or where air and sound must pass through freely.",
+        applications: ["Ventilated seating", "Sound absorption", "Air management"],
         image: productImage("reticulated-foam"),
         imageAlt: "Macro view of pale yellow open-cell foam with a network of interconnected pores",
       },
@@ -157,8 +167,8 @@ export const productCategories: ProductCategory[] = [
         id: "pu-slab-foam",
         name: "PU Slab Foam",
         description:
-          "Flexible polyurethane foam produced in large blocks and converted into sheets and shapes, available across a range of densities and firmness levels.",
-        applications: ["Seating and cushioning", "Lamination substrates", "Comfort and padding layers"],
+          "The soft, resilient foam that gives seat covers their padded feel — produced in blocks and converted into sheets across a range of densities and firmness levels.",
+        applications: ["Seat cover padding", "Lamination foam layers", "Cushion comfort layers"],
         image: productImage("pu-slab-foam"),
         imageAlt: "Warehouse racks holding tall stacks of cream and pink flexible foam sheets",
       },
@@ -166,8 +176,8 @@ export const productCategories: ProductCategory[] = [
         id: "fr-foam",
         name: "FR Foam",
         description:
-          "Foam formulated with flame-retardant properties for applications where fire performance requirements must be met.",
-        applications: ["Automotive interiors", "Transport seating", "Fire-sensitive applications"],
+          "Foam formulated with flame-retardant properties, providing comfort layers for seats and interiors that must meet fire-performance requirements.",
+        applications: ["Seat cover laminates", "Automotive interiors", "Transport seating"],
         image: productImage("fr-foam"),
         imageAlt: "Close-up of a light grey profiled foam sheet with rows of rounded peaks",
       },
@@ -175,17 +185,17 @@ export const productCategories: ProductCategory[] = [
         id: "non-fr-foam",
         name: "Non FR Foam",
         description:
-          "General-purpose foam without flame-retardant additives, for cushioning and padding where FR performance is not specified.",
-        applications: ["Cushioning and padding", "Protective packaging", "General-purpose uses"],
+          "Soft, general-purpose foam for cushioning and padding in components where flame-retardant performance is not specified.",
+        applications: ["Cushioning and padding", "Comfort components", "Protective packaging"],
         image: productImage("non-fr-foam"),
         imageAlt: "Hand lifting from a thick white foam slab, leaving a soft handprint in the surface",
       },
       {
         id: "insulation-foam",
-        name: "Insulation Foams",
+        name: "Insulation Foam",
         description:
-          "Foams selected for thermal and acoustic insulation, helping to reduce heat transfer, noise and vibration.",
-        applications: ["Thermal insulation", "Acoustic and NVH damping", "HVAC components"],
+          "Foam that reduces noise, vibration and heat transfer, contributing to a quieter, more comfortable cabin.",
+        applications: ["Acoustic and NVH damping", "Thermal insulation", "Interior components"],
         image: productImage("insulation-foam"),
         imageAlt: "Pile of grey tubular foam pipe insulation with one hollow end visible",
       },
@@ -193,10 +203,10 @@ export const productCategories: ProductCategory[] = [
         id: "epdm-foam",
         name: "EPDM Foam",
         description:
-          "Closed-cell synthetic rubber foam with good resistance to weather, ozone and UV, used where a compressible, durable seal is needed.",
-        applications: ["Gaskets and seals", "Weatherstripping", "Vibration damping pads"],
-        image: productImage("epdm-foam"),
-        imageAlt: "Assorted black and blue rubber O-rings, gaskets and seal rings",
+          "Durable closed-cell rubber foam that seals and cushions, resisting weather, ozone and UV where a compressible, long-lasting seal is needed.",
+        applications: ["Gaskets and seals", "Weatherstripping", "Anti-vibration pads"],
+        image: "/images/products/epdm-foam-v2.webp",
+        imageAlt: "Close-up of coiled black rubber sealing strips",
       },
     ],
   },
@@ -204,7 +214,7 @@ export const productCategories: ProductCategory[] = [
     id: "scrim",
     index: "03",
     title: "Scrim",
-    summary: "Reinforcement textiles in a range of constructions.",
+    summary: "Backing textiles that give seat-cover laminates strength, stability and a smooth fit.",
     image: "/images/scrim-v2.webp",
     imageAlt: "Rolls of woven fiberglass reinforcement fabric",
     products: [
@@ -212,26 +222,26 @@ export const productCategories: ProductCategory[] = [
         id: "mono-scrim",
         name: "Mono Scrim",
         description:
-          "A lightweight, open grid of single yarns that adds strength and dimensional stability to laminates while keeping weight low.",
-        applications: ["Laminate reinforcement", "Foam backing", "Lightweight composites"],
+          "A light, open grid of single yarns laminated behind the foam, adding strength and stability so the seat cover holds its shape without becoming stiff.",
+        applications: ["Seat cover backing", "Foam reinforcement", "Lightweight laminates"],
         image: productImage("mono-scrim"),
         imageAlt: "Close-up of a fine, open square-grid mesh of thin single threads",
       },
       {
-        id: "warp-netted-scrim",
-        name: "Warp Netted Scrim",
+        id: "warp-knitted-scrim",
+        name: "Warp Knitted Scrim",
         description:
-          "An open net produced by warp knitting, giving a stable, non-fraying structure that reinforces without adding bulk.",
-        applications: ["Foam and fabric backing", "Laminate reinforcement", "Technical textiles"],
-        image: productImage("warp-netted-scrim"),
+          "A warp-knitted open net that backs the foam with a stable, non-fraying layer, helping covers sew cleanly and stay smooth.",
+        applications: ["Seat cover backing", "Sewing stability", "Laminate reinforcement"],
+        image: productImage("warp-knitted-scrim"),
         imageAlt: "Close-up of white knitted netting with small hexagonal open cells",
       },
       {
         id: "circular-knitted-scrim",
         name: "Circular Knitted Scrim",
         description:
-          "Knitted on circular machines into a tubular fabric, this scrim offers stretch and recovery so it can follow curved and contoured shapes.",
-        applications: ["Seat and trim backing", "Contoured components", "Stretch reinforcement"],
+          "A stretchable knitted scrim that moves with the cover, following the curves of bolsters and headrests for a clean, wrinkle-free fit.",
+        applications: ["Contoured seat covers", "Bolsters and headrests", "Stretch backing"],
         image: productImage("circular-knitted-scrim"),
         imageAlt: "Row of industrial circular knitting machines with yarn feeders in a bright factory hall",
       },
@@ -268,7 +278,7 @@ export const capabilities = [
     icon: "lab",
     title: "Lab Facility",
     description:
-      "Professional laboratory infrastructure supporting material testing and quality evaluation.",
+      "Laboratory infrastructure for testing and evaluating seating materials before they reach the production line.",
     image: "/images/lab-v3.webp",
     imageAlt: "Engineer inspecting a precision component under an industrial microscope",
   },
@@ -277,7 +287,7 @@ export const capabilities = [
     icon: "storage",
     title: "Storage Facility",
     description:
-      "Organized storage infrastructure designed for efficient material handling and inventory management.",
+      "Organised storage that keeps foams and fabrics clean, protected and ready for production.",
     image: "/images/storage-v2.webp",
     imageAlt: "Modern warehouse aisle with tall storage racking",
   },
@@ -286,7 +296,7 @@ export const capabilities = [
     icon: "transport",
     title: "Own Transport",
     description:
-      "Dedicated transportation capabilities supporting dependable logistics and material movement.",
+      "Our own transport for dependable delivery to seating and vehicle production lines.",
     image: "/images/transport-v3.webp",
     imageAlt: "White long-haul freight truck on a highway",
   },
@@ -295,7 +305,7 @@ export const capabilities = [
     icon: "packing",
     title: "Automotive Packing Standard",
     description:
-      "Automotive-oriented packing standards and packaging practices designed to support material protection and handling requirements.",
+      "Automotive packing standards that protect seating materials in transit, so they arrive in condition for production.",
     image: "/images/packing-v2.webp",
     imageAlt: "Pallet of cartons being stretch-wrapped for shipment",
   },

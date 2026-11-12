@@ -4,8 +4,8 @@ import { Reveal } from "@/components/ui/Reveal"
 
 /** Closing call-to-action used at the end of the inner pages. */
 export function CtaBand({
-  title = "Discuss Your Material Requirements.",
-  description = "Connect with our team to explore the right lamination, foam and scrim solutions for your business.",
+  title = "Building a More Comfortable Seat?",
+  description = "Talk to our team about laminations, foams and scrims for your next seating programme.",
 }: {
   title?: string
   description?: string

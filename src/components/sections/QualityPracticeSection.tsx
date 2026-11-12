@@ -13,8 +13,8 @@ export function QualityPracticeSection() {
         <SectionHeading
           id="quality-title"
           eyebrow="Quality in Practice"
-          title="Standards Supported by Infrastructure."
-          description="Our certified management systems are backed by in-house testing and automotive-oriented packing practices."
+          title="Comfort, Tested and Protected."
+          description="Certified quality systems backed by in-house testing and automotive packing practices, so materials arrive ready for the seat."
         />
         <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-2 md:gap-6 lg:gap-8">
           {practices.map((practice, i) => (

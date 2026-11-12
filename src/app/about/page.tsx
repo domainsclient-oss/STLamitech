@@ -7,7 +7,7 @@ export const metadata = pageMetadata({
   path: "/about",
   title: "About Us",
   description:
-    "STLamitech manufactures advanced lamination, foam and scrim solutions from facilities in Chennai and Pune, India.",
+    "STLamitech is a seating lamination company producing fabrics, foams and scrims for factory-fitted car seats, from facilities in Chennai and Pune, India.",
 })
 
 export default function AboutPage() {
@@ -16,8 +16,8 @@ export default function AboutPage() {
       <PageHero
         path="/about"
         eyebrow="Who We Are"
-        title="Built on Precision."
-        description="A manufacturer of advanced material solutions, specialising in laminations, foams and scrims for modern industrial applications."
+        title="Comfort Starts Here."
+        description="A seating lamination company producing the fabrics, foams and scrims behind factory-fitted car seats."
         image="/images/laminations-v2.webp"
         imageAlt="Rows of material rolls on an industrial production line"
       />

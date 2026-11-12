@@ -27,9 +27,8 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color] duration-500 ease-(--ease-premium)",
-        solid
-          ? "border-b border-black/5 bg-white/90 shadow-[0_8px_30px_-20px_rgba(0,0,0,0.25)] backdrop-blur-md"
-          : "border-b border-white/10 bg-transparent",
+        "border-b border-black/5 bg-white",
+        solid && "shadow-[0_8px_30px_-20px_rgba(0,0,0,0.25)]",
       )}
     >
       <a
@@ -45,7 +44,7 @@ export function Header() {
         )}
       >
         <Link href="/" aria-label="STLamitech — home" className="relative z-50">
-          <Logo tone={solid ? "dark" : "light"} className="transition-colors duration-500" />
+          <Logo tone={menuOpen ? "light" : "dark"} className="transition-colors duration-500" />
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">
@@ -59,9 +58,7 @@ export function Header() {
                     aria-current={active ? "page" : undefined}
                     className={cn(
                       "group relative py-2 text-[0.9375rem] font-medium tracking-wide xl:text-base transition-colors duration-300",
-                      solid
-                        ? active ? "text-charcoal" : "text-charcoal/80 hover:text-charcoal"
-                        : active ? "text-white" : "text-white/80 hover:text-white",
+                      active ? "text-charcoal" : "text-charcoal/80 hover:text-charcoal",
                     )}
                   >
                     {link.label}
@@ -81,12 +78,12 @@ export function Header() {
         <div className="flex items-center gap-3">
           <ButtonLink
             href="/contact"
-            variant={solid ? "solid" : "light"}
+            variant={menuOpen ? "light" : "solid"}
             className="hidden h-11 px-5 sm:inline-flex"
           >
             Get in Touch
           </ButtonLink>
-          <MobileNavigation open={menuOpen} onOpenChange={setMenuOpen} light={!solid} pathname={pathname} />
+          <MobileNavigation open={menuOpen} onOpenChange={setMenuOpen} light={false} pathname={pathname} />
         </div>
       </div>
     </header>

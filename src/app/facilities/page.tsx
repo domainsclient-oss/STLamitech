@@ -8,7 +8,7 @@ export const metadata = pageMetadata({
   path: "/facilities",
   title: "Facilities",
   description:
-    "STLamitech’s manufacturing facilities in Chennai and Pune, supported by lab, storage, transport and automotive packing capabilities.",
+    "STLamitech’s seating material facilities in Chennai and Pune, supported by lab, storage, transport and automotive packing capabilities.",
 })
 
 export default function FacilitiesPage() {
@@ -17,8 +17,8 @@ export default function FacilitiesPage() {
       <PageHero
         path="/facilities"
         eyebrow="Facilities"
-        title="Manufacturing Presence."
-        description="Two manufacturing facilities in India — Chennai and Pune — supported by in-house laboratory, storage and logistics infrastructure."
+        title="Where Comfort Is Made."
+        description="Seating material manufacturing in Chennai and Pune, supported by in-house laboratory, storage and logistics infrastructure."
         image="/images/hero-production-line-v3.webp"
         imageAlt="Bright, modern manufacturing hall with CNC machining cells and automated workstations"
       />

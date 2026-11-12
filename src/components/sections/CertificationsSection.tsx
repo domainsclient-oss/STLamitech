@@ -13,8 +13,8 @@ export function CertificationsSection() {
         <SectionHeading
           id="certifications-title"
           eyebrow="Certifications"
-          title="Quality That Meets Global Standards"
-          description="Our commitment to quality is reflected in internationally recognized management standards."
+          title="Quality You Can Sit On"
+          description="Seating materials made under internationally recognised quality management standards, so comfort and finish stay consistent from vehicle to vehicle."
         />
         <div className="mt-14 grid gap-5 md:mt-20 md:grid-cols-2 md:gap-6">
           {certifications.map((cert, i) => (

@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   path: "/certifications",
   title: "Certifications",
   description:
-    "STLamitech’s quality management is aligned with internationally recognised IATF and ISO standards.",
+    "STLamitech’s seating materials are made under quality management aligned with internationally recognised IATF and ISO standards.",
 })
 
 export default function CertificationsPage() {
@@ -18,8 +18,8 @@ export default function CertificationsPage() {
       <PageHero
         path="/certifications"
         eyebrow="Certifications"
-        title="Quality to Global Standards."
-        description="Our commitment to quality is reflected in internationally recognized management standards."
+        title="Consistent Comfort, Certified."
+        description="IATF and ISO aligned quality management, so every seating material feels and finishes the way it should."
         image="/images/certifications-banner.webp"
         imageAlt="Factory worker in a safety helmet checking the quality of produced material samples"
         imagePosition="center 20%"

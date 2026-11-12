@@ -3,7 +3,7 @@ import { heroMedia } from "@/lib/site"
 import { ButtonLink } from "@/components/ui/ButtonLink"
 import { Parallax } from "@/components/ui/Parallax"
 
-const pillars = ["Laminations", "Foam", "Scrim"]
+const pillars = ["Softness", "Comfort", "Finish"]
 
 export function HeroSection() {
   return (
@@ -50,7 +50,7 @@ export function HeroSection() {
         <div className="max-w-5xl">
           <p className="hero-rise eyebrow mb-8 flex items-center gap-3 text-white/70" style={{ "--delay": "150ms" } as React.CSSProperties}>
             <span aria-hidden="true" className="h-px w-10 bg-white/50" />
-            Advanced Material Solutions
+            Automotive Seating Materials
           </p>
           <h1
             id="hero-title"
@@ -58,12 +58,12 @@ export function HeroSection() {
           >
             <span className="block overflow-hidden pb-1">
               <span className="hero-rise block" style={{ "--delay": "300ms" } as React.CSSProperties}>
-                Engineering Materials.
+                Comfort You Feel.
               </span>
             </span>
             <span className="block overflow-hidden pb-1">
               <span className="hero-rise block text-white/55" style={{ "--delay": "450ms" } as React.CSSProperties}>
-                Delivering Excellence.
+                Layer by Layer.
               </span>
             </span>
           </h1>
@@ -71,14 +71,14 @@ export function HeroSection() {
             className="hero-rise mt-8 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
             style={{ "--delay": "650ms" } as React.CSSProperties}
           >
-            Advanced lamination, foam and scrim solutions engineered to meet the evolving demands of modern industries.
+            The first thing a new car owner feels is the seat. We laminate the fabrics, foams and scrims that vehicle makers build into their standard seat covers and cushions — so factory-fitted seating feels soft, supportive and finely finished from day one.
           </p>
           <div
             className="hero-rise mt-10 flex flex-col gap-3 sm:flex-row"
             style={{ "--delay": "800ms" } as React.CSSProperties}
           >
             <ButtonLink href="/products" variant="light">
-              Explore Our Capabilities
+              Explore Seating Materials
             </ButtonLink>
             <ButtonLink href="/contact" variant="outlineLight">
               Contact Our Team
@@ -90,7 +90,7 @@ export function HeroSection() {
           className="hero-rise mt-16 flex items-end justify-between gap-6 border-t border-white/15 pt-6 md:mt-14"
           style={{ "--delay": "1000ms" } as React.CSSProperties}
         >
-          <ul className="flex flex-wrap gap-x-8 gap-y-2 text-xs tracking-[0.2em] text-white/60 uppercase" aria-label="Solution areas">
+          <ul className="flex flex-wrap gap-x-8 gap-y-2 text-xs tracking-[0.2em] text-white/60 uppercase" aria-label="What we engineer">
             {pillars.map((pillar, i) => (
               <li key={pillar} className="flex items-center gap-3">
                 <span className="text-white/35">0{i + 1}</span>

@@ -3,9 +3,9 @@ import { Reveal } from "@/components/ui/Reveal"
 import { TextLink } from "@/components/ui/ButtonLink"
 
 const focusAreas = [
-  { title: "Manufacturing Capability", text: "Lamination, foam and scrim processes under one organisation." },
-  { title: "Quality Focus", text: "Management systems aligned with IATF and ISO standards." },
-  { title: "Customer-Focused Solutions", text: "Material solutions shaped around each customer’s requirements." },
+  { title: "Softness", text: "Foam and lamination choices tuned for a soft, welcoming first touch." },
+  { title: "Comfort", text: "Cushioning and breathable layers that support occupants mile after mile." },
+  { title: "Finish", text: "Smooth, consistent laminates that help seat covers sew and fit cleanly." },
 ]
 
 const defaultImage = {
@@ -48,16 +48,17 @@ export function AboutSection({ image = defaultImage }: { image?: { src: string; 
             delay={80}
             className="text-4xl leading-[1.05] font-semibold tracking-tight text-charcoal md:text-5xl xl:text-6xl"
           >
-            Built on Precision. Driven by Performance.
+            The Comfort Behind Every Factory-Fitted Seat.
           </Reveal>
           <Reveal as="p" delay={160} className="mt-8 text-lg leading-relaxed text-charcoal/85">
-            STLamitech is a manufacturer of advanced material solutions, specialising in laminations, foams and
-            scrims for modern industrial applications.
+            STLamitech is a seating lamination company. We produce the laminated fabrics, foams and scrims that
+            vehicle manufacturers and their seating suppliers turn into the standard seat covers and cushions fitted
+            to new cars.
           </Reveal>
           <Reveal as="p" delay={220} className="mt-5 leading-relaxed text-graphite">
-            From our manufacturing facilities in Chennai and Pune, we bring together process capability, quality
-            discipline and a customer-first approach — supported by in-house laboratory, storage and logistics
-            infrastructure.
+            From our facilities in Chennai and Pune, we focus on what passengers notice every day — how soft a seat
+            feels, how well it supports, and how cleanly its cover is finished — backed by in-house laboratory,
+            storage and logistics infrastructure.
           </Reveal>
 
           <ul className="mt-12 border-t border-border">
@@ -76,7 +77,7 @@ export function AboutSection({ image = defaultImage }: { image?: { src: string; 
           </ul>
 
           <Reveal delay={400} className="mt-10">
-            <TextLink href="/products">Discover Our Capabilities</TextLink>
+            <TextLink href="/products">Explore Seating Materials</TextLink>
           </Reveal>
         </div>
       </div>
