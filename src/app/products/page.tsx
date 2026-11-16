@@ -19,8 +19,8 @@ export default function ProductsPage() {
         eyebrow="Products & Services"
         title="Every Layer of the Seat."
         description="Laminations, foams and scrims engineered for the softness, support and finish of factory-fitted seating."
-        image="/images/products-banner.webp"
-        imageAlt="Worker loading yarn spools onto an industrial knitting machine in a textile factory"
+        image="/images/products-banner-foam.webp"
+        imageAlt="Stacks of lilac and cream flexible foam sheets in a production workshop"
       />
       <ProductDetailSection />
       <CapabilitiesSection />

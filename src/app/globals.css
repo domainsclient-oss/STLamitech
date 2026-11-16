@@ -333,9 +333,6 @@
   .marquee-track [aria-hidden="true"] {
     display: none;
   }
-  .marquee-secondary {
-    display: none;
-  }
   *,
   *::before,
   *::after {

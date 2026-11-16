@@ -8,13 +8,21 @@ const focusAreas = [
   { title: "Finish", text: "Smooth, consistent laminates that help seat covers sew and fit cleanly." },
 ]
 
-const defaultImage = {
-  src: "/images/about-plant-v4.webp",
-  alt: "Engineers reviewing technical data on a tablet beside a CNC machine on the shop floor",
+type AboutImage = {
+  src: string
+  alt: string
+  /** CSS object-position, to keep the subject in frame when the tall crop trims a wide photo. */
+  position?: string
+}
+
+const defaultImage: AboutImage = {
+  src: "/images/about-luxury-car-seats.webp",
+  alt: "Diamond-quilted cognac leather rear seats beside a polished centre armrest in a luxury car",
+  position: "85% center",
 }
 
 /** `image` lets inner pages use a different photo from the home page. */
-export function AboutSection({ image = defaultImage }: { image?: { src: string; alt: string } }) {
+export function AboutSection({ image = defaultImage }: { image?: AboutImage }) {
   return (
     <section id="about" aria-labelledby="about-title" className="bg-white py-24 md:py-32 xl:py-40">
       <div className="container-page grid gap-14 lg:grid-cols-12 lg:gap-16 xl:gap-24">
@@ -25,7 +33,8 @@ export function AboutSection({ image = defaultImage }: { image?: { src: string; 
               alt={image.alt}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover grayscale-[40%]"
+              className="object-cover"
+              style={image.position ? { objectPosition: image.position } : undefined}
             />
           </Reveal>
           <Reveal
