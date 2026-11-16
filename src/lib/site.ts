@@ -6,12 +6,24 @@
  * names, statistics or addresses that have not been confirmed by STLamitech.
  */
 
+/**
+ * Absolute site URL for canonical links and social share previews. WhatsApp and other
+ * crawlers need a public https address, so fall back to the production domain Vercel
+ * injects at build time before falling back to localhost for local development.
+ */
+function siteUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL
+  const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL
+  if (vercelHost) return `https://${vercelHost}`
+  return "http://localhost:3000"
+}
+
 export const site = {
   name: "STLamitech",
   tagline: "Seating Comfort Materials",
   description:
     "STLamitech is a seating lamination company producing the laminated fabrics, foams and scrims behind factory-fitted car seats — engineered for softness, comfort and a clean finish. Manufacturing in Chennai and Pune, India.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: siteUrl(),
 } as const
 
 export const navLinks = [

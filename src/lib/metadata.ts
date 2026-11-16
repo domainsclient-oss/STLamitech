@@ -3,6 +3,7 @@ import { site } from "./site"
 
 const ogImage = {
   url: "/images/og-image.png",
+  type: "image/png",
   width: 1200,
   height: 630,
   alt: "ST Lamitech logo",
