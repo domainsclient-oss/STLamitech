@@ -342,7 +342,7 @@ export const customers = [
 
 /** Placeholder contact details — replace before launch. */
 export const contactDetails = {
-  email: "contact@stlamitech.in",
+  email: "info@stlamitech.in",
   phone: "+91 00000 00000",
   locations: [
     {
@@ -359,11 +359,6 @@ export const contactDetails = {
       // Add the Pune address lines here to show its card in the Contact section.
       lines: [] as string[],
     },
-  ],
-  socials: [
-    { label: "LinkedIn", network: "linkedin", href: "#" },
-    { label: "YouTube", network: "youtube", href: "#" },
-    { label: "Instagram", network: "instagram", href: "#" },
   ],
 } as const
 

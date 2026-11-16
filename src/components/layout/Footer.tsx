@@ -2,7 +2,6 @@ import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { contactDetails, navLinks, productCategories } from "@/lib/site"
 import { Logo } from "@/components/ui/Logo"
-import { SocialIcon } from "@/components/ui/SocialIcon"
 
 async function CopyrightYear() {
   "use cache"
@@ -19,19 +18,6 @@ export function Footer() {
             Laminations, foams and scrims engineered for the softness, comfort and finish of automotive
             seating.
           </p>
-          <ul className="mt-8 flex flex-wrap gap-3" aria-label="Social media">
-            {contactDetails.socials.map((social) => (
-              <li key={social.label}>
-                <a
-                  href={social.href}
-                  className="inline-flex h-10 items-center gap-2 border border-white/15 px-4 text-xs tracking-wide text-white/70 transition-colors hover:border-white hover:text-white"
-                >
-                  <SocialIcon network={social.network} className="size-4 shrink-0" />
-                  {social.label}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <FooterColumn title="Navigate" className="lg:col-span-2">
