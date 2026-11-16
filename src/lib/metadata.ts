@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { site } from "./site"
 
 const ogImage = {
-  url: "/images/og-image.png",
+  url: "/images/share-image.png",
   type: "image/png",
   width: 1200,
   height: 630,

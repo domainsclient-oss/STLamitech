@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/images/share-image.png",
         type: "image/png",
         width: 1200,
         height: 630,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description: site.description,
-    images: ["/images/og-image.png"],
+    images: ["/images/share-image.png"],
   },
 };
 
