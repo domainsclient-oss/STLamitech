@@ -2,10 +2,10 @@ import type { Metadata } from "next"
 import { site } from "./site"
 
 const ogImage = {
-  url: "/images/hero-production-line-v3.webp",
-  width: 2560,
-  height: 1396,
-  alt: "STLamitech — seating comfort materials",
+  url: "/images/og-image.png",
+  width: 1200,
+  height: 630,
+  alt: "ST Lamitech logo",
 }
 
 /**

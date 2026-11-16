@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/hero-production-line-v3.webp",
-        width: 2560,
-        height: 1396,
-        alt: "STLamitech — seating comfort materials",
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ST Lamitech logo",
       },
     ],
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description: site.description,
-    images: ["/images/hero-production-line-v3.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 

@@ -14,7 +14,7 @@ export function Footer() {
     <footer className="bg-charcoal-deep text-white">
       <div className="container-page grid gap-14 py-20 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 lg:py-24">
         <div className="lg:col-span-4">
-          <Logo tone="light" />
+          <Logo tone="light" className="h-16" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/60">
             Laminations, foams and scrims engineered for the softness, comfort and finish of automotive
             seating.

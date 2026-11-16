@@ -44,7 +44,7 @@ export function Header() {
         )}
       >
         <Link href="/" aria-label="STLamitech — home" className="relative z-50">
-          <Logo tone={menuOpen ? "light" : "dark"} className="transition-colors duration-500" />
+          <Logo tone={menuOpen ? "light" : "dark"} className="h-12 md:h-14" />
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">
