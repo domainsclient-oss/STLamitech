@@ -19,7 +19,7 @@ export default function CertificationsPage() {
         path="/certifications"
         eyebrow="Certifications"
         title="Consistent Comfort, Certified."
-        description="IATF and ISO aligned quality management, so every seating material feels and finishes the way it should."
+        description="IATF and ISO aligned quality management, so every automotive-standard seating material feels and finishes the way it should."
         image="/images/certifications-banner-seats.webp"
         imageAlt="Cognac leather front seats inside a modern car"
       />

@@ -13,7 +13,7 @@ export function ProductsSection() {
           id="products-title"
           eyebrow="Products & Services"
           title="Every Layer of a Comfortable Seat"
-          description="The foam that cushions, the scrim that supports and the lamination that brings them together with the face fabric."
+          description="The foam that cushions, the scrim that supports and the lamination that brings them together with the face fabric — all automotive standard and industrial grade."
         />
         <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {productCategories.map((category, i) => (

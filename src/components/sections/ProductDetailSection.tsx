@@ -17,7 +17,7 @@ export function ProductDetailSection() {
             id="catalogue-title"
             eyebrow="Our Portfolio"
             title="Every Layer of a Comfortable Seat"
-            description={`${productCategories.length} solution categories and ${total} product lines for the softness, support and finish of automotive seating.`}
+            description={`${productCategories.length} solution categories and ${total} product lines, made to automotive standard and industrial grade, for the softness, support and finish of automotive seating.`}
           />
 
           <Reveal as="nav" aria-label="Solution categories" delay={200} className="mt-12 md:mt-16">

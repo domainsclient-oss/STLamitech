@@ -10,7 +10,7 @@ export function CustomersSection() {
           id="customers-title"
           eyebrow="Customers"
           title="Trusted by Vehicle & Seating Manufacturers"
-          description="Long-term partnerships built on consistent quality, dependable supply and seating materials that perform."
+          description="Long-term partnerships built on consistent quality, dependable supply and automotive-standard, industrial-grade seating materials that perform."
         />
       </div>
       <Reveal variant="fade" delay={200} className="mt-14 border-y border-border bg-white md:mt-20">

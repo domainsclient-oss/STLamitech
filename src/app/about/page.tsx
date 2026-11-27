@@ -17,7 +17,7 @@ export default function AboutPage() {
         path="/about"
         eyebrow="Who We Are"
         title="Comfort Starts Here."
-        description="A seating lamination company producing the fabrics, foams and scrims behind factory-fitted car seats."
+        description="A seating lamination company producing the automotive-standard, industrial-grade fabrics, foams and scrims behind factory-fitted car seats."
         image="/images/laminations-v2.webp"
         imageAlt="Rows of material rolls on an industrial production line"
       />

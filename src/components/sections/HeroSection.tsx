@@ -3,7 +3,7 @@ import { heroMedia } from "@/lib/site"
 import { ButtonLink } from "@/components/ui/ButtonLink"
 import { Parallax } from "@/components/ui/Parallax"
 
-const pillars = ["Softness", "Comfort", "Finish"]
+const pillars = ["Softness", "Comfort", "Density", "Bonding", "Finish"]
 
 export function HeroSection() {
   return (
@@ -50,7 +50,7 @@ export function HeroSection() {
         <div className="max-w-5xl">
           <p className="hero-rise eyebrow mb-8 flex items-center gap-3 text-white/70" style={{ "--delay": "150ms" } as React.CSSProperties}>
             <span aria-hidden="true" className="h-px w-10 bg-white/50" />
-            Automotive Seating Materials
+            Automotive Standard &amp; Industrial Grade
           </p>
           <h1
             id="hero-title"
@@ -71,7 +71,7 @@ export function HeroSection() {
             className="hero-rise mt-8 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
             style={{ "--delay": "650ms" } as React.CSSProperties}
           >
-            The first thing a new car owner feels is the seat. We laminate the fabrics, foams and scrims that vehicle makers build into their standard seat covers and cushions — so factory-fitted seating feels soft, supportive and finely finished from day one.
+            The first thing a new car owner feels is the seat. We laminate the automotive-standard, industrial-grade fabrics, foams and scrims that vehicle makers build into their standard seat covers and cushions — so factory-fitted seating feels soft, supportive and finely finished from day one.
           </p>
           <div
             className="hero-rise mt-10 flex flex-col gap-3 sm:flex-row"

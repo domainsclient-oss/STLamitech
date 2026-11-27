@@ -22,7 +22,7 @@ export const site = {
   name: "STLamitech",
   tagline: "Seating Comfort Materials",
   description:
-    "STLamitech is a seating lamination company producing the laminated fabrics, foams and scrims behind factory-fitted car seats — engineered for softness, comfort and a clean finish. Manufacturing in Chennai and Pune, India.",
+    "STLamitech is a seating lamination company producing the automotive-standard, industrial-grade laminated fabrics, foams and scrims behind factory-fitted car seats — engineered for softness, comfort, density, bonding and a clean finish. Manufacturing in Chennai and Pune, India.",
   url: siteUrl(),
 } as const
 
@@ -116,7 +116,7 @@ export const productCategories: ProductCategory[] = [
     id: "laminations",
     index: "01",
     title: "Lamination",
-    summary: "Bonding face fabrics, foams and scrims into seat-cover composites that feel soft and finish cleanly.",
+    summary: "Automotive-standard bonding of face fabrics, foams and scrims into seat-cover composites that feel soft and finish cleanly.",
     image: "/images/laminations-v2.webp",
     imageAlt: "Rows of material rolls on an industrial production line",
     products: [
@@ -124,7 +124,7 @@ export const productCategories: ProductCategory[] = [
         id: "flame-lamination",
         name: "Flame Lamination",
         description:
-          "Foam is flame-bonded directly to the seat face fabric, giving the cover a soft, padded feel without a separate adhesive layer — the classic construction behind comfortable automotive seat covers.",
+          "Foam is flame-bonded directly to the seat face fabric, giving the cover a soft, padded feel without a separate adhesive layer — the classic automotive-standard construction behind comfortable seat covers.",
         applications: ["Seat cover fabrics", "Headrest and armrest covers", "Door and trim panels"],
         image: productImage("flame-lamination"),
         imageAlt: "Close-up of a row of blue gas flames above a steel burner bar",
@@ -142,7 +142,7 @@ export const productCategories: ProductCategory[] = [
         id: "pur-lamination",
         name: "PUR Lamination",
         description:
-          "Reactive PUR adhesive cures into a strong yet flexible bond that resists cabin heat and humidity, keeping seat covers smooth and well bonded in everyday use.",
+          "Reactive PUR adhesive cures into a strong yet flexible, industrial-grade bond that resists cabin heat and humidity, keeping seat covers smooth and well bonded in everyday use.",
         applications: ["Premium seat covers", "Performance fabrics", "High-durability bonding"],
         image: productImage("pur-lamination"),
         imageAlt: "White nonwoven textile web running over polished rollers in a brightly lit machine",
@@ -153,7 +153,7 @@ export const productCategories: ProductCategory[] = [
     id: "foam",
     index: "02",
     title: "Foam",
-    summary: "The cushioning and breathable layers that give a seat its softness and support.",
+    summary: "The industrial-grade cushioning and breathable layers that give a seat its softness and support.",
     image: "/images/foam-car-seat.webp",
     imageAlt: "Close-up of a padded car seat cushion and headrest",
     products: [
@@ -206,7 +206,7 @@ export const productCategories: ProductCategory[] = [
         id: "insulation-foam",
         name: "Insulation Foam",
         description:
-          "Foam that reduces noise, vibration and heat transfer, contributing to a quieter, more comfortable cabin.",
+          "Industrial-grade foam that reduces noise, vibration and heat transfer, contributing to a quieter, more comfortable cabin.",
         applications: ["Acoustic and NVH damping", "Thermal insulation", "Interior components"],
         image: productImage("insulation-foam"),
         imageAlt: "Pile of grey tubular foam pipe insulation with one hollow end visible",
@@ -215,7 +215,7 @@ export const productCategories: ProductCategory[] = [
         id: "epdm-foam",
         name: "EPDM Foam",
         description:
-          "Durable closed-cell rubber foam that seals and cushions, resisting weather, ozone and UV where a compressible, long-lasting seal is needed.",
+          "Durable, industrial-grade closed-cell rubber foam that seals and cushions, resisting weather, ozone and UV where a compressible, long-lasting seal is needed.",
         applications: ["Gaskets and seals", "Weatherstripping", "Anti-vibration pads"],
         image: "/images/products/epdm-foam-v2.webp",
         imageAlt: "Close-up of coiled black rubber sealing strips",
@@ -226,7 +226,7 @@ export const productCategories: ProductCategory[] = [
     id: "scrim",
     index: "03",
     title: "Scrim",
-    summary: "Backing textiles that give seat-cover laminates strength, stability and a smooth fit.",
+    summary: "Industrial-grade backing textiles that give seat-cover laminates strength, stability and a smooth fit.",
     image: "/images/scrim-v2.webp",
     imageAlt: "Rolls of woven fiberglass reinforcement fabric",
     products: [
@@ -261,6 +261,7 @@ export const productCategories: ProductCategory[] = [
   },
 ]
 
+/** Shown as callouts on the India map; `id` must have a matching pin in india-map.ts. */
 export const facilities = [
   {
     id: "chennai",
@@ -269,8 +270,6 @@ export const facilities = [
     // Placeholder — replace with an approved facility description.
     description:
       "Facility description to be provided. This space is reserved for an overview of the Chennai site’s operations and capabilities.",
-    image: "/images/facility-chennai-v2.webp",
-    imageAlt: "Clean, modern manufacturing plant interior",
   },
   {
     id: "pune",
@@ -279,8 +278,6 @@ export const facilities = [
     // Placeholder — replace with an approved facility description.
     description:
       "Facility description to be provided. This space is reserved for an overview of the Pune site’s operations and capabilities.",
-    image: "/images/facility-pune-v2.webp",
-    imageAlt: "Large manufacturing hall with symmetrical production bays",
   },
 ] as const
 
@@ -290,7 +287,7 @@ export const capabilities = [
     icon: "lab",
     title: "Lab Facility",
     description:
-      "Laboratory infrastructure for testing and evaluating seating materials before they reach the production line.",
+      "Laboratory infrastructure for testing and evaluating seating materials to automotive standard before they reach the production line.",
     image: "/images/lab-v3.webp",
     imageAlt: "Engineer inspecting a precision component under an industrial microscope",
   },
@@ -299,7 +296,7 @@ export const capabilities = [
     icon: "storage",
     title: "Storage Facility",
     description:
-      "Organised storage that keeps foams and fabrics clean, protected and ready for production.",
+      "Organised, industrial-grade storage that keeps foams and fabrics clean, protected and ready for production.",
     image: "/images/storage-v2.webp",
     imageAlt: "Modern warehouse aisle with tall storage racking",
   },
@@ -338,12 +335,14 @@ export const customers = [
   { name: "JBM", file: "jbm.png", ratio: 3.35 },
   { name: "NHK", file: "nhk.svg", ratio: 2.86 },
   { name: "Seoyon", file: "seoyon.svg", ratio: 7.53 },
+  { name: "Kolon Industries", file: "kolon-industries.svg", ratio: 12.36 },
+  { name: "LX Hausys", file: "lx-hausys.svg", ratio: 5.94 },
+  { name: "Si Interpack", file: "si-interpack.svg", ratio: 4.83 },
 ] as const
 
 /** Placeholder contact details — replace before launch. */
 export const contactDetails = {
   email: "info@stlamitech.in",
-  phone: "+91 00000 00000",
   locations: [
     {
       city: "Chennai",

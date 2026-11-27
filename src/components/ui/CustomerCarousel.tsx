@@ -50,13 +50,20 @@ function MarqueeRow({
                   key={`${copy}-${customer.file}`}
                   className="flex h-24 w-[max(12rem,21vw)] shrink-0 items-center justify-center border-r border-border px-6 md:h-28"
                 >
-                  <Image
-                    src={`/images/customers/${customer.file}`}
-                    alt={copy === 1 ? "" : customer.name}
-                    width={width}
-                    height={height}
-                    className="h-auto max-w-full scale-[0.78] object-contain md:scale-[0.92]"
-                  />
+                  {/* The box, not the image, takes the size: it can shrink with the tile and keeps the logo's
+                      shape, which a fixed width/height pair resized by CSS cannot do without rounding drift. */}
+                  <div
+                    className="relative max-w-full scale-[0.78] md:scale-[0.92]"
+                    style={{ width, aspectRatio: `${width} / ${height}` }}
+                  >
+                    <Image
+                      src={`/images/customers/${customer.file}`}
+                      alt={copy === 1 ? "" : customer.name}
+                      fill
+                      sizes={`${width}px`}
+                      className="object-contain"
+                    />
+                  </div>
                 </li>
               )
             })}
@@ -67,7 +74,7 @@ function MarqueeRow({
   )
 }
 
-/** Two logo rows moving in opposite directions, with the customers split between them (6 + 5 for 11). */
+/** Two logo rows moving in opposite directions, with the customers split between them (7 + 7 for 14). */
 export function CustomerCarousel() {
   const half = Math.ceil(customers.length / 2)
   return (

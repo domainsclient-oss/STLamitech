@@ -8,7 +8,7 @@ export const metadata = pageMetadata({
   path: "/products",
   title: "Products & Services",
   description:
-    "Flame, hot melt and PUR lamination, seating foams and backing scrims from STLamitech, engineered for the softness, support and finish of automotive seats.",
+    "Flame, hot melt and PUR lamination, seating foams and backing scrims from STLamitech — automotive standard, industrial grade, engineered for the softness, support and finish of automotive seats.",
 })
 
 export default function ProductsPage() {
@@ -18,7 +18,7 @@ export default function ProductsPage() {
         path="/products"
         eyebrow="Products & Services"
         title="Every Layer of the Seat."
-        description="Laminations, foams and scrims engineered for the softness, support and finish of factory-fitted seating."
+        description="Automotive-standard, industrial-grade laminations, foams and scrims engineered for the softness, support and finish of factory-fitted seating."
         image="/images/products-banner-foam.webp"
         imageAlt="Stacks of lilac and cream flexible foam sheets in a production workshop"
       />

@@ -5,6 +5,8 @@ import { TextLink } from "@/components/ui/ButtonLink"
 const focusAreas = [
   { title: "Softness", text: "Foam and lamination choices tuned for a soft, welcoming first touch." },
   { title: "Comfort", text: "Cushioning and breathable layers that support occupants mile after mile." },
+  { title: "Density", text: "Foam densities matched to each seat zone for lasting shape and support." },
+  { title: "Bonding", text: "Strong, even adhesion between fabric, foam and scrim that holds through years of use." },
   { title: "Finish", text: "Smooth, consistent laminates that help seat covers sew and fit cleanly." },
 ]
 
@@ -27,12 +29,17 @@ export function AboutSection({ image = defaultImage }: { image?: AboutImage }) {
     <section id="about" aria-labelledby="about-title" className="bg-white py-24 md:py-32 xl:py-40">
       <div className="container-page grid gap-14 lg:grid-cols-12 lg:gap-16 xl:gap-24">
         <div className="relative lg:col-span-6">
-          <Reveal variant="image" className="relative aspect-[4/5] overflow-hidden bg-mist sm:aspect-[4/3] lg:aspect-[4/5]">
+          {/* From lg up the image fills the row, so it always matches the height of the text column. */}
+          <Reveal
+            variant="image"
+            className="relative aspect-[4/5] overflow-hidden bg-mist sm:aspect-[4/3] lg:absolute lg:inset-0 lg:aspect-auto"
+          >
             <Image
               src={image.src}
               alt={image.alt}
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              // The tall lg crop shows only a slice of the landscape photo, so it needs far more than the column's width.
+              sizes="(min-width: 1024px) 150vw, 100vw"
               className="object-cover"
               style={image.position ? { objectPosition: image.position } : undefined}
             />
@@ -60,7 +67,7 @@ export function AboutSection({ image = defaultImage }: { image?: AboutImage }) {
             The Comfort Behind Every Factory-Fitted Seat.
           </Reveal>
           <Reveal as="p" delay={160} className="mt-8 text-lg leading-relaxed text-charcoal/85">
-            STLamitech is a seating lamination company. We produce the laminated fabrics, foams and scrims that
+            STLamitech is a seating lamination company. We produce the automotive-standard, industrial-grade laminated fabrics, foams and scrims that
             vehicle manufacturers and their seating suppliers turn into the standard seat covers and cushions fitted
             to new cars.
           </Reveal>

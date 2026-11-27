@@ -18,7 +18,7 @@ export default function FacilitiesPage() {
         path="/facilities"
         eyebrow="Facilities"
         title="Where Comfort Is Made."
-        description="Seating material manufacturing in Chennai and Pune, supported by in-house laboratory, storage and logistics infrastructure."
+        description="Automotive-standard, industrial-grade seating material manufacturing in Chennai and Pune, supported by in-house laboratory, storage and logistics infrastructure."
         image="/images/hero-production-line-v3.webp"
         imageAlt="Bright, modern manufacturing hall with CNC machining cells and automated workstations"
       />

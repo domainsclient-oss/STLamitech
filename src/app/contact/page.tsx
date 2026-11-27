@@ -15,7 +15,7 @@ export default function ContactPage() {
         path="/contact"
         eyebrow="Contact"
         title="Let’s Talk Seating."
-        description="Connect with our team about seat cover materials, cushioning and backing for your next programme."
+        description="Connect with our team about automotive-standard, industrial-grade seat cover materials, cushioning and backing for your next programme."
         image="/images/facility-pune-v2.webp"
         imageAlt="Large manufacturing hall with symmetrical production bays"
       />

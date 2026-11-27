@@ -14,7 +14,7 @@ export function CertificationsSection() {
           id="certifications-title"
           eyebrow="Certifications"
           title="Quality You Can Sit On"
-          description="Seating materials made under internationally recognised quality management standards, so comfort and finish stay consistent from vehicle to vehicle."
+          description="Automotive-standard seating materials made under internationally recognised quality management standards, so comfort and finish stay consistent from vehicle to vehicle."
         />
         <div className="mt-14 grid gap-5 md:mt-20 md:grid-cols-2 md:gap-6">
           {certifications.map((cert, i) => (

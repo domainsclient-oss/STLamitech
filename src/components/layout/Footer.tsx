@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 import { contactDetails, navLinks, productCategories } from "@/lib/site"
 import { Logo } from "@/components/ui/Logo"
 
@@ -15,7 +15,7 @@ export function Footer() {
         <div className="lg:col-span-4">
           <Logo tone="light" className="h-16" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/60">
-            Laminations, foams and scrims engineered for the softness, comfort and finish of automotive
+            Automotive-standard, industrial-grade laminations, foams and scrims engineered for the softness, comfort, density, bonding and finish of automotive
             seating.
           </p>
         </div>
@@ -57,10 +57,6 @@ export function Footer() {
           <li className="flex items-center gap-3 pt-2">
             <Mail aria-hidden="true" className="size-4 shrink-0 text-white/45" />
             <FooterLink href={`mailto:${contactDetails.email}`}>{contactDetails.email}</FooterLink>
-          </li>
-          <li className="flex items-center gap-3">
-            <Phone aria-hidden="true" className="size-4 shrink-0 text-white/45" />
-            <FooterLink href={`tel:${contactDetails.phone.replace(/\s/g, "")}`}>{contactDetails.phone}</FooterLink>
           </li>
         </FooterColumn>
       </div>

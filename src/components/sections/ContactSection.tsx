@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 import { contactDetails } from "@/lib/site"
 import { cn } from "@/lib/utils"
 import { Reveal } from "@/components/ui/Reveal"
@@ -33,11 +33,6 @@ export function ContactSection() {
             <ContactRow icon={<Mail aria-hidden="true" className="size-4" />} label="Email">
               <a href={`mailto:${contactDetails.email}`} className="hover:underline">
                 {contactDetails.email}
-              </a>
-            </ContactRow>
-            <ContactRow icon={<Phone aria-hidden="true" className="size-4" />} label="Phone">
-              <a href={`tel:${contactDetails.phone.replace(/\s/g, "")}`} className="hover:underline">
-                {contactDetails.phone}
               </a>
             </ContactRow>
           </Reveal>

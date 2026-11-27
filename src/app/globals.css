@@ -304,6 +304,24 @@
   animation: backdrop-in 0.35s ease-out;
 }
 
+/* ---------- Facility map ---------- */
+/* The highlighted states rise off the map once it scrolls into view, then the leader lines draw out
+   to the callouts. The lift offset matches LIFT in FacilityMap.tsx (SVG user units). */
+.facility-map-lift {
+  transition: transform 1.1s var(--ease-premium) 0.25s;
+}
+.facility-map[data-visible="true"] .facility-map-lift {
+  transform: translate(-4px, -10px);
+}
+.facility-map-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.9s var(--ease-premium) 0.9s;
+}
+.facility-map[data-visible="true"] .facility-map-line {
+  stroke-dashoffset: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .certificate-dialog[open],
   .certificate-dialog[open]::backdrop {

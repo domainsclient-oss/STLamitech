@@ -20,7 +20,7 @@ export function CapabilitiesSection() {
           tone="light"
           eyebrow="Infrastructure & Capabilities"
           title="Built Around the Production Line."
-          description="From material testing to protected delivery — the infrastructure that keeps seating materials consistent and on time."
+          description="From material testing to protected delivery — the industrial-grade infrastructure that keeps automotive-standard seating materials consistent and on time."
         />
         <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-2 xl:grid-cols-4">
           {capabilities.map((capability, i) => (
